@@ -34,8 +34,17 @@ const config: Config = {
           800: '#DFDDDE',
 
         },
+
         'secondary': {
-          0: '#F2F2F2',
+          0: '#F2F1F0',
+        },
+
+        'green': {
+          0: '#1e4a3d', //titles
+          100: '#295547', //filter
+          200: '#325f51', //filter hover + content hover
+          400: '#5d7e73', //filter + label
+          600: '#73988c', //filter hover + tiny numbers
         },
       },
       

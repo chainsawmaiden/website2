@@ -15,13 +15,13 @@
 
 @layer base {
   .pf {
-    @apply font-abcfavorit text-basefavorit sm:text-lgfavorit;
+    @apply font-abcfavorit text-basefavorit sm:text-lgfavorit tracking-normal;
   }
 }
 
 @layer base {
   .bf {
-    @apply font-abcfavorit text-basefavorit;
+    @apply font-abcfavorit text-basefavorit tracking-normal;
   }
 }
 

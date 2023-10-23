@@ -17,7 +17,7 @@ export default function Header() {
       
       pb-2 sm:pb-1 px-0 md:px-5'>
 
-        <Link className='font-times font-normal whitespace-nowrap hover:text-primary-400 transition duration-300 leading-[4rem] text-[3.25rem] md:text-8xl md:leading-[5rem]' href="/" ><span>Aditya </span><span className='-ml-2 font-abcfavorit italic text-[3.1rem] md:text-[5.75rem]'>Das</span></Link>
+        <Link className='font-times tracking-tight font-normal whitespace-nowrap hover:text-primary-400 transition duration-300 leading-[4rem] text-[3.25rem] md:text-8xl md:leading-[5rem]' href="/" ><span className='tracking-[-0.34rem] md:tracking-[-0.65rem]'>A</span>ditya <span className='-ml-2 tracking-normal font-abcfavorit italic text-[3.1rem] md:text-[5.75rem]'>Das</span></Link>
 
         <div className="grow flex-col w-full md:w-min text-base text-center sm:text-lg md:mt-0.5 -mt-1.5 md:text-left">
           <p className='sm:hidden font-abcfavorit font-bold text-basefavorit'>-- BETTER ON DESKTOP --</p>
