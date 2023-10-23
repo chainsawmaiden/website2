@@ -8,9 +8,9 @@ import { links } from "@/lib/data";
 export default function Header() {
 
   return (
-    <header className='mb-[0.2rem]'>
+    <header className='mb-[0.2rem] mt-8 sm:mt-9'>
       <div className='
-      font-light bg-secondary-0 text-primary-0 
+      font-light text-primary-0 
       h-fit top-0 w-full translate-x-0
       flex transition flex-wrap gap-x-8 gap-y-1 justify-center 
       sm:flex-row sm:items-left sm:justify-start
@@ -21,7 +21,7 @@ export default function Header() {
 
         <div className="grow flex-col -mt-1 w-min text-base text-center sm:text-lg sm:text-left">
           <p className='sm:hidden font-abcfavorit font-bold text-basefavorit'>-- BETTER ON DESKTOP --</p>
-          <p className="sm:min-w-[28rem] font-light font-times leading-snug text-primary-100">
+          <p className="sm:min-w-[30.5rem] font-light font-times leading-snug text-primary-100">
             <span className="pf">A lover of all trades</span> & a master of none. Currently double majoring in <span className="pf">art</span> and <span className="pf">computer science</span> at <span className="pf">YALE UNIVERSITY &apos;27. </span> ♡
           </p>
           <nav >

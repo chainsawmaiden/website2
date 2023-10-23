@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -43,7 +43,7 @@ export default function Hero() {
     }
 
     function Filters() {
-        return (<section className={`grid grid-cols-6 md:grid-cols-7 -translate-x-1 gap-x-1 pb-3 font-abcfavorit text-basefavorit sm:text-lgfavorit sm:pb-4 min-w-min sm:items-start sm:mx-6`}>
+        return (<section className={`flex justify-between px-[4%] -translate-x-1 pb-3 font-abcfavorit text-basefavorit md:text-lgfavorit sm:pb-4 min-w-min sm:items-start sm:mx-6`}>
             <p 
                 onClick={() => handleClickAll()}
                 className={`underline cursor-pointer ${myFilters.includes('all') ? 'text-primary-0 hover:text-primary-200' : 'text-primary-400 hover:text-primary-600'} whitespace-nowrap justify-self-center transition transition-duration-[300ms]'`}
@@ -66,7 +66,7 @@ export default function Hero() {
     }
 
     function Label({children} : {children: React.ReactNode}) {
-        return <div className="col-span-full md:col-span-1 md:flex md:flex-col-reverse md:-ml-[2rem] justify-start items-start md:-rotate-180 md:h-auto md:w-min"><p className='md:mb-1 font-abcfavorit text-basefavorit text-primary-400 uppercase md:[writing-mode:vertical-lr] whitespace-nowrap'>{children}</p></div>
+        return <motion.div layout> <div className="col-span-full md:col-span-1 md:flex md:flex-col-reverse md:-ml-[2rem] justify-start items-start md:-rotate-180 md:h-auto md:w-min"><p className='md:mb-1 font-abcfavorit text-basefavorit text-primary-400 uppercase md:[writing-mode:vertical-lr] whitespace-nowrap'>{children}</p></div></motion.div>
     }
 
     return (
@@ -104,7 +104,7 @@ export default function Hero() {
                             </>
 
                             const contentList = <>
-                                <p className=' group-hover:text-secondary-0 text-[.5rem] text-primary-300 font-normal font-abcdiatype mt-1 sm:mt-0.5 transition duration-300 w-4'>{`[${index+1 < 9 ? '0' : ''}${(index+1)}]`}</p>
+                                <p className=' group-hover:text-secondary-0 text-[.5rem] text-primary-300 font-normal font-abcdiatype mt-1 sm:mt-0.5 transition duration-300 w-4'>{`[${index+1 < 10 ? '0' : ''}${(index+1)}]`}</p>
 
                                 <p className={` group-hover:text-secondary-0 text-primary-100 whitespace-nowrap text-5xl mr-3 transition duration-300 ${index % 2 == 0 ? 'capitalize font-abcfavorit text-5xlfavorit italic mt-1' : 'uppercase font-times'}`}>{project.title}</p>
 
@@ -126,6 +126,7 @@ export default function Hero() {
                             </>;
                             
                             return (
+                                    
                                 project.category == category && (project.page != "" ? 
 
                                     <Link className={`group flex flex-col break-inside-avoid h-auto w-full pb-2 transition hover:scale-105 ease-in hover:z-0 ${!boxView && 'md:flex-row md:hover:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-primary-100 md:hover:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'visible') : (boxView ? 'hidden' : 'invisible')}`}
@@ -134,16 +135,18 @@ export default function Hero() {
                                         href={project.page}
                                         target={project.page[0] == "/" ? "_self" : "_blank"}>
 
-                                            {content}
+                                        {content}
 
-                                    </Link> 
+                                    </Link>
                                     
-                                    : 
+                                : 
 
                                     <div className={`group cursor-help flex flex-col break-inside-avoid h-auto w-full pb-2 transition hover:scale-105 ease-in hover:z-0 ${!boxView && 'md:flex-row md:hover:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-primary-100 md:hover:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'visible') : (boxView ? 'hidden' : 'invisible')}`}
                                     onMouseOver= {() => handleMouseOver(project)}
                                     onMouseOut={handleMouseOut}>
+
                                         {content}
+                                        
                                     </div>)
                                 )
                             })
@@ -155,21 +158,26 @@ export default function Hero() {
             <AnimatePresence>
                 {isHovering && 
                     <motion.div
-                        className='pointer-events-none animate-pulse'
+                        className='pointer-events-none'
                         initial={{ opacity: 0}}
                         animate={{ opacity: 1}}
                         exit={{ opacity: 0}}
                         transition={{ duration: 0.2 }}
                         >
-                        <Image
-                            src={hoverContent[1]}
-                            alt="project image" 
-                            className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-none h-[15rem] sm:h-[30rem]'
-                        />
+                        <motion.div 
+                            animate={{opacity: [1, .75]}}
+                            transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1.2}}>
+                            
+                            <Image
+                                src={hoverContent[1]}
+                                alt="project image" 
+                                className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-none h-[15rem] sm:h-[30rem]'
+                            />
 
-                        <p className={`px-1  fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-secondary-0' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
-                            {hoverContent[2] ? 'click to open' : "PAGE COMING SOON"}
-                        </p>
+                            <p className={`px-1  fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-secondary-0' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
+                                {hoverContent[2] ? 'click to open' : "PAGE COMING SOON"}
+                            </p>
+                        </motion.div>
                     </motion.div>
                 }
             </AnimatePresence>

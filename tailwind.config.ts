@@ -30,6 +30,9 @@ const config: Config = {
           300: '#757575',
           400: '#929292',
           600: '#B6B6B6',
+          700: '#CDCDCD',
+          800: '#DFDFDF',
+
         },
         'secondary': {
           0: '#ffffff',

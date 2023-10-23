@@ -19,6 +19,12 @@
   }
 }
 
+@layer base {
+  .bf {
+    @apply font-abcfavorit text-basefavorit;
+  }
+}
+
 @font-face {
   font-family: "abcdiatype";
   src: url("../public/fonts/ABCDiatypeEdu-Light.otf");
