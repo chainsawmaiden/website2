@@ -12,20 +12,20 @@ export default function Header() {
       <div className='
       font-light text-primary-0 
       h-fit top-0 w-full translate-x-0
-      flex transition flex-wrap gap-x-8 gap-y-1 justify-center 
-      sm:flex-row sm:items-left sm:justify-start
+      flex transition flex-wrap gap-x-8 gap-y-1 justify-center md:flex-row flex-col
+      md:items-left md:justify-start items-center
       
-      pb-2 sm:pb-1 sm:px-5'>
+      pb-2 sm:pb-1 px-0 md:px-5'>
 
         <Link className='font-times font-normal whitespace-nowrap hover:text-primary-400 transition duration-300 leading-[4rem] text-[3.25rem] md:text-8xl md:leading-[5rem]' href="/" ><span>Aditya </span><span className='-ml-2 font-abcfavorit italic text-[3.1rem] md:text-[5.75rem]'>Das</span></Link>
 
-        <div className="grow flex-col w-min text-base text-center sm:text-lg sm:mt-0.5 sm:text-left">
+        <div className="grow flex-col w-full md:w-min text-base text-center sm:text-lg md:mt-0.5 -mt-1.5 md:text-left">
           <p className='sm:hidden font-abcfavorit font-bold text-basefavorit'>-- BETTER ON DESKTOP --</p>
-          <p className="sm:min-w-[30.5rem] font-light font-times leading-snug text-primary-100">
+          <p className="md:min-w-[31rem] font-light font-times leading-snug text-primary-100">
             <span className="pf">A lover of all trades</span> & a master of none. Currently double majoring in <span className="pf">art</span> and <span className="pf">computer science</span> at YALE UNIVERSITY &apos;27. ♡
           </p>
           <nav >
-            <ul className='flex flex-row justify-center gap-x-1 min-w-min text-primary-100 sm:justify-start'>
+            <ul className='flex flex-row justify-center gap-x-1 min-w-min text-primary-100 md:justify-start'>
               {links.map((link, index) => (
                 <li key={index} className='flex flex-row gap-x-1 min-w-min sm:justify-start'>
                   <Link className='underline hover:text-primary-400 transition font-abcfavorit text-basefavorit sm:text-lgfavorit capitalize transition-duration-[300ms] font-normal' href={link.href} target={link.newTab ? "_blank" : "_self"}>{link.name}</Link>
