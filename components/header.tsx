@@ -8,7 +8,7 @@ import { links } from "@/lib/data";
 export default function Header() {
 
   return (
-    <header className='mb-[0.2rem] mt-5 sm:mt-12'>
+    <header className='mb-[0.2rem] mt-5 sm:mt-11'>
       <div className='
       font-light text-primary-0 
       h-fit top-0 w-full translate-x-0
