@@ -43,7 +43,7 @@ export default function Hero() {
     }
 
     function Filters() {
-        return (<section className={`flex justify-between px-[4%] -translate-x-1 pb-3 font-abcfavorit text-basefavorit md:text-lgfavorit sm:pb-4 min-w-min sm:items-start sm:mx-6`}>
+        return (<section className={`flex justify-between md:px-5 pb-3 font-abcfavorit text-basefavorit md:text-lgfavorit sm:pb-5 min-w-min sm:items-start`}>
             <p 
                 onClick={() => handleClickAll()}
                 className={`underline cursor-pointer ${myFilters.includes('all') ? 'text-primary-0 hover:text-primary-200' : 'text-primary-400 hover:text-primary-600'} whitespace-nowrap justify-self-center transition transition-duration-[300ms]'`}

@@ -8,7 +8,7 @@ import { links } from "@/lib/data";
 export default function Header() {
 
   return (
-    <header className='mb-[0.2rem] mt-8 sm:mt-9'>
+    <header className='mb-[0.2rem] mt-5 sm:mt-9'>
       <div className='
       font-light text-primary-0 
       h-fit top-0 w-full translate-x-0
@@ -37,7 +37,7 @@ export default function Header() {
           </nav>
         </div>
       </div>
-      <hr className="solid border-primary-400 mt-1 mb-2"></hr>
+      <hr className="solid border-primary-400 mb-1.5"></hr>
     </header>
   )
 }
