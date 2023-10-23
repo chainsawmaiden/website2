@@ -87,7 +87,7 @@ export default function Hero() {
                     
                     <Label>{category}</Label>
 
-                    <section className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start md:sm:gap-x-2.5'}`}>    
+                    <section key={index} className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start md:sm:gap-x-2.5'}`}>    
 
                         {projectsData.map((project, index) => {
 
