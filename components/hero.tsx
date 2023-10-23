@@ -46,13 +46,13 @@ export default function Hero() {
         return (<section className={`flex justify-between md:px-5 pb-3 font-abcfavorit text-basefavorit md:text-lgfavorit sm:pb-5 min-w-min sm:items-start`}>
             <p 
                 onClick={() => handleClickAll()}
-                className={`underline cursor-pointer ${myFilters.includes('all') ? 'text-primary-0 hover:text-primary-200' : 'text-primary-400 hover:text-primary-600'} whitespace-nowrap justify-self-center transition transition-duration-[300ms]'`}
+                className={`underline cursor-pointer ${myFilters.includes('all') ? 'text-primary-100 hover:text-primary-200' : 'text-primary-400 hover:text-primary-600'} whitespace-nowrap justify-self-center transition transition-duration-[300ms]'`}
             >{myFilters.includes('all') ? 'all ❤︎' : 'all ♡'}</p>
                     
             {filters.map((f, index) => (
                 <p 
                     onClick={() => handleClick(f)}
-                    className={`underline cursor-pointer ${myFilters.includes(f) ? 'text-primary-0 hover:text-primary-200' : 'text-primary-400 hover:text-primary-600'} whitespace-nowrap justify-self-center transition transition-duration-[300ms]`} 
+                    className={`underline cursor-pointer ${myFilters.includes(f) ? 'text-primary-100 hover:text-primary-200' : 'text-primary-400 hover:text-primary-600'} whitespace-nowrap justify-self-center transition transition-duration-[300ms]`} 
                     key={index}>{f}</p>
             ))}
 
@@ -174,7 +174,7 @@ export default function Hero() {
                                 className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-none h-[15rem] sm:h-[30rem]'
                             />
 
-                            <p className={`px-1  fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-secondary-0' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
+                            <p className={`px-1  fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-white' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
                                 {hoverContent[2] ? 'click to open' : "PAGE COMING SOON"}
                             </p>
                         </motion.div>

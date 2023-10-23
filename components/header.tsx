@@ -15,11 +15,11 @@ export default function Header() {
       flex transition flex-wrap gap-x-8 gap-y-1 justify-center 
       sm:flex-row sm:items-left sm:justify-start
       
-      pb-2 sm:pb-1'>
+      pb-2 sm:pb-1 sm:px-5'>
 
-        <Link className='font-abcfavorit font-normal whitespace-nowrap hover:text-primary-400 transition duration-300 leading-[4rem] text-[3.5rem] md:text-8xl md:leading-[5rem]' href="/" >ADITYA DAS</Link>
+        <Link className='font-times font-normal whitespace-nowrap hover:text-primary-400 transition duration-300 leading-[4rem] text-[3.25rem] md:text-8xl md:leading-[5rem]' href="/" ><span>Aditya </span><span className='-ml-2 font-abcfavorit italic text-[3.1rem] md:text-[5.75rem]'>Das</span></Link>
 
-        <div className="grow flex-col -mt-1 w-min text-base text-center sm:text-lg sm:text-left">
+        <div className="grow flex-col w-min text-base text-center sm:text-lg sm:mt-0.5 sm:text-left">
           <p className='sm:hidden font-abcfavorit font-bold text-basefavorit'>-- BETTER ON DESKTOP --</p>
           <p className="sm:min-w-[30.5rem] font-light font-times leading-snug text-primary-100">
             <span className="pf">A lover of all trades</span> & a master of none. Currently double majoring in <span className="pf">art</span> and <span className="pf">computer science</span> at YALE UNIVERSITY &apos;27. ♡

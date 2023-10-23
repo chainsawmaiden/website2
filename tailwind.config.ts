@@ -24,21 +24,21 @@ const config: Config = {
 
       colors: {
         'primary': {
-          0: '#202020',
-          100: "#353535",
-          200: "#6A6A6A",
-          300: '#757575',
-          400: '#929292',
-          600: '#B6B6B6',
-          700: '#CDCDCD',
-          800: '#DFDFDF',
+          0: '#202930',
+          100: "#353C42",
+          200: "#6A6E73",
+          300: '#75777B',
+          400: '#929598',
+          600: '#B6B9BA',
+          700: '#CDCECF',
+          800: '#DFDDDE',
 
         },
         'secondary': {
-          0: '#ffffff',
+          0: '#F2F2F2',
         },
       },
-
+      
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
