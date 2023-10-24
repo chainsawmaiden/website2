@@ -69,7 +69,7 @@ export default function Hero() {
                 onMouseOut={handleMouseOutToggle}
                 >
                 <Image alt='v' src={boxView ? (hoverToggle ? iconListHover : iconList) : (hoverToggle ? iconGridHover : iconGrid)} className='hidden md:inline justify-self-center w-auto h-[1.05rem] transition mt-1 col-span-1'/>
-                <p className='text-yellow-500 group-hover:text-yellow-700 transition font-abcdiatype text-[.5rem]'>[toggle]</p>
+                <p className='text-primary-400 group-hover:text-[#a99d74] font-abcdiatype text-[.5rem]'>[toggle]</p>
                 
             </div>
             
