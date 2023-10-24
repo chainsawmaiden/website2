@@ -57,7 +57,7 @@ export const projectsData = [
     {
       title: "Criterion Cinemas",
       displayImage: criterionCinemas,
-      hoverImage: criterionCinemasHover,
+      hoverImage: criterionCinemas,
       page: "",
       type: ["design", "school"] as string[],
       description: ", a rebranding project I made for my graphic design class",
