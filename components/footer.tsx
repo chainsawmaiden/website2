@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className='hidden lg:block sticky mt-auto font-times font-light text-base text-primary-700* text-yellow-600 w-screen -ml-24 bg-yellow-200'>
+      <footer className='hidden lg:block sticky mt-0 sm:mt-auto font-times font-light text-base text-primary-700* text-yellow-600 w-screen -ml-24 bg-yellow-200'>
             <hr className="solid border-primary-0 pb-2"></hr>
             <p className='mb-2 leading-5 px-24'><span className='bf'>ADITYA DAS</span> © 2023 / Coded with <span className='bf'>React, NextJS, TailwindCSS, FramerMotion, & TypeScript</span> / Fonts: <span className='bf'>ABC Favorit</span>, Times New Roman, & <span className='font-abcdiatype font-normal text-[.9rem]'>ABC Diatype</span>
             </p>
@@ -40,7 +40,7 @@ export default function Footer() {
       <hr className="solid border-primary-0 pb-1"></hr>
       <div className='mb-1 leading-5 px-10 sm:px-24 w-full flex justify-between'>
         <p ><span className='bf'>ADITYA DAS</span> © 2023</p>
-        <p className='inline sm:hidden animate-pulse bf' onClick={handleMouseOut}>[tap to expand]</p>
+        <p className='inline sm:hidden font-abcdiatype animate-pulse bf text-xs py-1 text-yellow-450' onClick={handleMouseOut}>[tap to expand]</p>
       </div>
       
     </motion.article>
