@@ -8,13 +8,16 @@ import Image from 'next/image';
 import { filters, projectsData, categories } from '@/lib/data';
 
 import iconList from '@/public/icons/icon-list.png'
+import iconListHover from '@/public/icons/icon-list-hover.png'
 import iconGrid from '@/public/icons/icon-grid.png'
+import iconGridHover from '@/public/icons/icon-grid-hover.png'
 
 export default function Hero() {
     const [isHovering, setIsHovering] = useState(false as boolean);
     const [hoverContent, setHoverContent] = useState([] as any[]);
     const [myFilters, setMyFilters] = useState(['all'] as string[]);
-    const [boxView, setBoxView] = useState(false);
+    const [boxView, setBoxView] = useState(false as boolean);
+    const [hoverToggle, setHoverToggle] = useState(false as boolean);
 
     console.log('rendered')
 
@@ -42,23 +45,31 @@ export default function Hero() {
         console.log(myFilters)
     }
 
+    function handleMouseOverToggle() {setHoverToggle(true)}
+    function handleMouseOutToggle() {setHoverToggle(false)}
+
     function Filters() {
-        return (<section className={`flex justify-between md:px-5 pb-3 font-abcfavorit text-basefavorit md:text-lgfavorit sm:pb-5 min-w-min sm:items-start`}>
+        return (<section className={`flex sticky justify-between px-5 sm:px-24 font-abcfavorit text-basefavorit md:text-lgfavorit min-w-min sm:items-start`}>
             <p 
                 onClick={() => handleClickAll()}
-                className={`underline cursor-pointer ${myFilters.includes('all') ? 'text-primary-100 hover:text-primary-200' : 'text-primary-400 hover:text-primary-600'} whitespace-nowrap justify-self-center transition transition-duration-[300ms]'`}
+                className={`underline cursor-pointer ${myFilters.includes('all') ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in'`}
             >{myFilters.includes('all') ? 'all ❤︎' : 'all ♡'}</p>
                     
             {filters.map((f, index) => (
                 <p 
                     onClick={() => handleClick(f)}
-                    className={`underline cursor-pointer ${myFilters.includes(f) ? 'text-primary-100 hover:text-primary-200' : 'text-primary-400 hover:text-primary-600'} whitespace-nowrap justify-self-center transition transition-duration-[300ms]`} 
+                    className={`underline cursor-pointer ${myFilters.includes(f) ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in`} 
                     key={index}>{f}</p>
             ))}
 
-            <div className='hidden cursor-pointer group md:flex flex-row justify-center gap-x-0.5' onClick={handleToggle}>
-                <Image alt='v' src={boxView ? iconList : iconGrid} className='hidden md:inline justify-self-center w-auto h-[1.05rem] invert-[60%] group-hover:invert-[80%] transition mt-1 col-span-1'/>
-                <p className='text-primary-400 group-hover:text-primary-600 transition font-abcdiatype text-[.5rem]'>[toggle]</p>
+            <div 
+                className='hidden cursor-pointer group md:flex flex-row justify-center gap-x-0.5' 
+                onClick={handleToggle}
+                onMouseOver={handleMouseOverToggle}
+                onMouseOut={handleMouseOutToggle}
+                >
+                <Image alt='v' src={boxView ? (hoverToggle ? iconListHover : iconList) : (hoverToggle ? iconGridHover : iconGrid)} className='hidden md:inline justify-self-center w-auto h-[1.05rem] transition mt-1 col-span-1'/>
+                <p className='text-yellow-500 group-hover:text-yellow-700 transition font-abcdiatype text-[.5rem]'>[toggle]</p>
                 
             </div>
             
@@ -80,16 +91,11 @@ export default function Hero() {
         // 4. sooooo bad so bad so bad but yeah thats basically what it does and then theres some other super jank stuff
 
         <>
-<<<<<<< Updated upstream
-            <section className={`flex flex-col ${!boxView && 'md:gap-y-3'}`}>
-                <div className={`${!boxView && 'md:-mb-3'}`}><Filters /></div>
-=======
             <section className='bg-yellow-200 block sticky mt-0 w-screen md:pt-0.5 -ml-10 sm:-ml-24'>
                 <Filters />
                 <hr className={`solid border-primary-0`}></hr>
             </section>
-            <section className={`flex flex-col py-4 -mx-8 px-8 overflow-x-clip overflow-scroll scrollbar-hide`}>    
->>>>>>> Stashed changes
+            <section className={`flex flex-col py-4 -mx-8 px-8 overflow-scroll scrollbar-hide ${!boxView && 'gap-y-3'}`}>
 
                 {categories.map((category, index) => (<div key={index} className='grid md:grid-cols-[0rem_auto] auto-rows-min'>
                     
@@ -137,7 +143,7 @@ export default function Hero() {
                                     
                                 project.category == category && (project.page != "" ? 
 
-                                    <Link className={`group flex flex-col break-inside-avoid h-auto w-full pb-2 transition hover:scale-105 ease-in hover:z-0 ${!boxView && 'md:flex-row md:hover:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-primary-100 md:hover:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'visible') : (boxView ? 'hidden' : 'invisible')}`}
+                                    <Link className={`group flex flex-col break-inside-avoid h-auto w-full pb-2 transition hover:scale-105 ease-in hover:z-0 ${!boxView && 'md:flex-row md:hover:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 md:hover:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'visible') : (boxView ? 'hidden' : 'invisible')}`}
                                         onMouseOver= {() => handleMouseOver(project)}
                                         onMouseOut={handleMouseOut}
                                         href={project.page}
@@ -149,7 +155,7 @@ export default function Hero() {
                                     
                                 : 
 
-                                    <div className={`group cursor-help flex flex-col break-inside-avoid h-auto w-full pb-2 transition hover:scale-105 ease-in hover:z-0 ${!boxView && 'md:flex-row md:hover:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-primary-100 md:hover:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'visible') : (boxView ? 'hidden' : 'invisible')}`}
+                                    <div className={`group cursor-help flex flex-col break-inside-avoid h-auto w-full pb-2 transition hover:scale-105 ease-in hover:z-0 ${!boxView && 'md:flex-row md:hover:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 md:hover:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'visible') : (boxView ? 'hidden' : 'invisible')}`}
                                     onMouseOver= {() => handleMouseOver(project)}
                                     onMouseOut={handleMouseOut}>
 

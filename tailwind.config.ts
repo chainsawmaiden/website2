@@ -38,14 +38,6 @@ const config: Config = {
           0: '#F2F1F0',
         },
 
-<<<<<<< Updated upstream
-        'green': {
-          0: '#1e4a3d', //titles
-          100: '#295547', //filter
-          200: '#325f51', //filter hover + content hover
-          400: '#5d7e73', //filter + label
-          600: '#73988c', //filter hover + tiny numbers
-=======
         'yellow': {
           100: '#EFE8C7',
           200: '#EFD98D',
@@ -55,7 +47,6 @@ const config: Config = {
           500: '#665C38',
           600: '#7D7763',
           700: '#A89D74',
->>>>>>> Stashed changes
         },
       },
       
