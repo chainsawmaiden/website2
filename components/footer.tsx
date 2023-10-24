@@ -40,7 +40,7 @@ export default function Footer() {
       <hr className="solid border-primary-0 pb-1"></hr>
       <div className='mb-1 leading-5 px-10 sm:px-24 w-full flex justify-between'>
         <p ><span className='bf'>ADITYA DAS</span> © 2023</p>
-        <p className='inline sm:hidden font-abcdiatype animate-pulse bf text-xs py-0.5 text-yellow-450' onClick={handleMouseOut}>[tap to expand]</p>
+        <p className='inline sm:hidden font-abcdiatype animate-pulse bf text-xs py-0.5 text-primary-600' onClick={handleMouseOut}>[tap to expand]</p>
       </div>
       
     </motion.article>

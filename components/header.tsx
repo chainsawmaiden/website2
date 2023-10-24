@@ -79,11 +79,11 @@ export default function Header() {
           <div className="grow flex-col w-full md:w-min text-base text-center sm:text-lg md:mt-0.5 -mt-2 mb-1 md:text-left">
             {headerText}
             {navBar}
-            <p className='text-yellow-400 block text-sm animate-pulse mt-1 -mb-3 cursor-pointer sm:hidden' 
+            <p className='text-primary-400 block text-sm animate-pulse mt-1 -mb-3 cursor-pointer sm:hidden' 
             onClick={handleMouseOut}>[tap me to collapse]</p>
           </div>
         </div>
-        <p className='text-yellow-400 text-sm animate-pulse -mt-5 mb-1 w-full text-center hidden sm:block'>[drag mouse out to collapse]</p>
+        <p className='text-primary-400 text-sm animate-pulse -mt-5 mb-1 w-full text-center hidden sm:block'>[drag mouse out to collapse]</p>
         <hr className='solid border-primary-0'></hr>
       </motion.article></AnimatePresence>
       : <motion.article
@@ -99,12 +99,12 @@ export default function Header() {
         px-5 sm:px-24 md:px-[7.25rem]*
         '>
 
-          <Link className='animate-pulse font-times tracking-tight whitespace-nowrap hover:text-yellow-400 transition duration-300 text-2xl' href="/" >
+          <Link className='font-times tracking-tight whitespace-nowrap hover:text-yellow-400 transition duration-300 text-2xl' href="/" >
             <span className={`tracking-[-.11rem]`}>A</span>ditya <span className='-ml-[0.18rem] tracking-normal font-abcfavorit italic text-[1.43rem]'>Das</span> <span className='-ml-[.18rem]'> ♡</span>
           </Link>
 
-           <p className='text-yellow-400 hidden text-sm animate-pulse sm:block py-2'>[hover to expand]</p>
-           <p className='text-yellow-400 block text-sm animate-pulse sm:hidden py-2'>[tap to expand]</p>
+           <p className='text-primary-600 hidden text-sm animate-pulse sm:block py-2'>[hover to expand]</p>
+           <p className='text-primary-600 block text-sm animate-pulse sm:hidden py-2'>[tap to expand]</p>
         </div>
         <hr className='solid border-primary-0'></hr>
       </motion.article>}</div>
