@@ -143,7 +143,7 @@ export default function Hero() {
                                     
                                 project.category == category && (project.page != "" ? 
 
-                                    <Link className={`group flex transition ease-in ${boxView ? 'hover:bg-yellow-100 hover:z-0 hover:scale-105 rounded-sm h-auto pb-2 break-inside-avoid w-full flex-col' : 'flex-row hover:scale-[1.02] h-12 w-auto pb-0 hover:bg-yellow-400 hover:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'block md:visible') : (boxView ? 'hidden' : 'hidden md:invisible')}`}
+                                    <Link className={`group flex transition ease-in hover:z-0 hover:scale-105 rounded-sm h-auto pb-2 break-inside-avoid w-full flex-col hover:bg-yellow-100 ${boxView ? '' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'block md:visible') : (boxView ? 'hidden' : 'hidden md:invisible')}`}
                                         onMouseOver= {() => handleMouseOver(project)}
                                         onMouseOut={handleMouseOut}
                                         href={project.page}
@@ -155,7 +155,7 @@ export default function Hero() {
                                     
                                 : 
 
-                                    <div className={`group cursor-help flex transition ease-in ${boxView ? 'hover:bg-yellow-100 hover:z-0 hover:scale-105 rounded-sm h-auto pb-2 break-inside-avoid w-full flex-col' : 'flex-row hover:scale-[1.02] h-12 w-auto pb-0 hover:bg-yellow-400 hover:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'block md:visible') : (boxView ? 'hidden' : 'hidden md:invisible')}`}
+                                    <div className={`group cursor-help flex transition ease-in hover:z-0 hover:scale-105 rounded-sm h-auto pb-2 break-inside-avoid w-full flex-col hover:bg-yellow-100 ${boxView ? '' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'block' : 'block md:visible') : (boxView ? 'hidden' : 'hidden md:invisible')}`}
                                     onMouseOver= {() => handleMouseOver(project)}
                                     onMouseOut={handleMouseOut}>
 
