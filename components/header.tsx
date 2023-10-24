@@ -13,7 +13,7 @@ export default function Header() {
   function handleMouseOut() {setExpand(false)}
 
   const headerText = <p className="md:min-w-[31rem] font-light font-times leading-snug text-primary-100">
-  ...aspires to <span className="pf">tell stories creatively</span> through all mediums. He is currently double majoring in <span className="pf">Art</span> and <span className="pf">Computer Science</span> at YALE UNIVERSITY &apos;27.
+  Aspiring to build <span className="pf">creative</span> and <span className="pf">engaging</span> things through various mediums. Currently in New Haven, double majoring in <span className="pf">art</span> and <span className="pf">computer science</span> at <span className='pf'>Yale University</span> &apos;27.
   </p>
 
   const navBar = <nav>
@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
 
-    <header className='-ml-10 sm:-ml-24 top-0 bg-yellow-300 md:sticky w-screen transition z-10 cursor-help'
+    <header className='-ml-10 sm:-ml-24 top-0 bg-yellow-300 sticky w-screen transition z-10 cursor-help'
             >
       <div className='hidden lg:block h-full w-full'>
         <hr className='solid border-primary-0 mb-3'></hr>
@@ -43,8 +43,8 @@ export default function Header() {
         px-5 sm:px-24 md:px-[7.25rem]*
         '>
 
-          <Link className='font-times tracking-tight font-normal whitespace-nowrap hover:text-yellow-450 transition duration-300 leading-[4rem] text-[3.25rem] xl:text-8xl xl:leading-[5rem]' href="/" >
-            <span className='tracking-[-0.34rem] xl:tracking-[-0.57rem]'>A</span>ditya <span className='-ml-[0.4rem] xl:-ml-1.5 tracking-normal font-abcfavorit italic text-[3.1rem] xl:text-[5.75rem]'>Das</span> <span className='-ml-2.5 xl:-ml-1'> ♡</span>
+          <Link className='font-times tracking-tight font-normal whitespace-nowrap hover:text-yellow-450 transition duration-300 leading-[4rem] text-[3.25rem] xl:text-8xl* xl:leading-[5rem]*' href="/" >
+            <span className='tracking-[-0.34rem] xl:tracking-[-0.57rem]*'>A</span>ditya <span className='-ml-[0.4rem] xl:-ml-1.5* tracking-normal font-abcfavorit italic text-[3.1rem] xl:text-[5.75rem]*'>Das</span> <span className='-ml-2.5 xl:-ml-1'> ♡</span>
           </Link>
 
           <div className="grow flex-col w-full md:w-min text-base text-center sm:text-lg md:mt-0.5 -mt-2 mb-1 md:text-left">
@@ -80,7 +80,7 @@ export default function Header() {
             {headerText}
             {navBar}
             <p className='text-yellow-450 block text-sm animate-pulse mt-1 -mb-3 cursor-pointer sm:hidden' 
-            onClick={handleMouseOut}>[tap to collapse]</p>
+            onClick={handleMouseOut}>[tap me to collapse]</p>
           </div>
         </div>
         <p className='text-yellow-450 text-sm animate-pulse -mt-5 mb-1 w-full text-center hidden sm:block'>[drag mouse out to collapse]</p>

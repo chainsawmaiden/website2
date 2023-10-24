@@ -36,7 +36,7 @@ export default function Footer() {
     initial={{height: 40, opacity: 0}}
     animate={{height: 'min-content', opacity: 100}}
     
-    className='group animate-pulse'>
+    className='group'>
       <hr className="solid border-primary-0 pb-1"></hr>
       <div className='mb-1 leading-5 px-10 sm:px-24 w-full flex justify-between'>
         <p ><span className='bf'>ADITYA DAS</span> © 2023</p>
