@@ -57,7 +57,7 @@ export const projectsData = [
     {
       title: "Criterion Cinemas",
       displayImage: criterionCinemas,
-      hoverImage: criterionCinemasHover,
+      hoverImage: criterionCinemas,
       page: "",
       type: ["design", "school"] as string[],
       description: ", a rebranding project I made for my graphic design class",
@@ -83,7 +83,7 @@ export const projectsData = [
     },
     {
       title: "17o1 Records",
-      displayImage: seventeenohone,
+      displayImage: questionMark,
       hoverImage: seventeenohone,
       page: "",
       type: ["design", "work"] as string[],
