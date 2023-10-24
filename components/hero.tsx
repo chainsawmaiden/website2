@@ -80,8 +80,16 @@ export default function Hero() {
         // 4. sooooo bad so bad so bad but yeah thats basically what it does and then theres some other super jank stuff
 
         <>
+<<<<<<< Updated upstream
             <section className={`flex flex-col ${!boxView && 'md:gap-y-3'}`}>
                 <div className={`${!boxView && 'md:-mb-3'}`}><Filters /></div>
+=======
+            <section className='bg-yellow-200 block sticky mt-0 w-screen md:pt-0.5 -ml-10 sm:-ml-24'>
+                <Filters />
+                <hr className={`solid border-primary-0`}></hr>
+            </section>
+            <section className={`flex flex-col py-4 -mx-8 px-8 overflow-x-clip overflow-scroll scrollbar-hide`}>    
+>>>>>>> Stashed changes
 
                 {categories.map((category, index) => (<div key={index} className='grid md:grid-cols-[0rem_auto] auto-rows-min'>
                     
