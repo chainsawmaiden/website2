@@ -13,7 +13,7 @@ export default function Header() {
   function handleMouseOut() {setExpand(false)}
 
   const headerText = <p className="md:min-w-[31rem] font-light font-times leading-snug text-primary-100">
-  Aspiring to build <span className="pf">creative</span> and <span className="pf">engaging</span> things through various mediums. Currently in New Haven, double majoring in <span className="pf">art</span> and <span className="pf">computer science</span> at <span className='pf'>Yale University</span> &apos;27.
+  Aspiring to build <span className="pf">creative</span> and <span className="pf">engaging</span> things through various mediums. Currently based in New Haven, CT, double majoring in <span className="pf">art</span> and <span className="pf">computer science</span> at <span className='pf'>Yale University</span> &apos;27.
   </p>
 
   const navBar = <nav>
