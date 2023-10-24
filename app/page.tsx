@@ -7,7 +7,7 @@ import HeaderSpacer from '@/components/headerSpacer'
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-screen h-[calc(100dvh)]">
+    <main className="flex flex-col h-screen">
       
       <Header />
       <Hero />
