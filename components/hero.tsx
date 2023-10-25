@@ -101,7 +101,7 @@ export default function Hero() {
                     
                     <Label>{category}</Label>
 
-                    <section key={index} className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start md:sm:gap-x-2.5'}`}>    
+                    <section key={index} className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start'}`}>    
 
                         {projectsData.map((project, index) => {
 
@@ -143,7 +143,7 @@ export default function Hero() {
                                     
                                 project.category == category && (project.page != "" ? 
 
-                                    <Link className={`group flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
+                                    <Link className={`group flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 md:-mr-2 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
                                         onMouseOver= {() => handleMouseOver(project)}
                                         onMouseOut={handleMouseOut}
                                         href={project.page}
@@ -155,7 +155,7 @@ export default function Hero() {
                                     
                                 : 
 
-                                    <div className={`group cursor-help flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
+                                    <div className={`group cursor-help flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:-mr-2 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
                                     onMouseOver= {() => handleMouseOver(project)}
                                     onMouseOut={handleMouseOut}>
 
