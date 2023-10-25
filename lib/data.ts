@@ -60,7 +60,16 @@ export const projectsData = [
       hoverImage: sculptor,
       page: "",
       type: ["design", "me"] as string[],
-      description: ", a digital illustration I created for my AP Art class.",
+      description: ", a digital illustration.",
+      category: "spotlight",
+    },
+    {
+      title: "Council",
+      displayImage: council,
+      hoverImage: council,
+      page: "",
+      type: ["design", "me"] as string[],
+      description: ", an oil painting I created on a 24x20 canvas",
       category: "spotlight",
     },
     {
@@ -72,6 +81,8 @@ export const projectsData = [
       description: ", a rebranding project I made for my graphic design class",
       category: "spotlight",
     },
+
+
     {
       title: "Yale Law School",
       displayImage: questionMark,
@@ -109,15 +120,6 @@ export const projectsData = [
       category: "2023",
     },
     {
-      title: "Council",
-      displayImage: council,
-      hoverImage: council,
-      page: "",
-      type: ["design", "me"] as string[],
-      description: ", an oil painting I created on a 24x20 canvas",
-      category: "2023",
-    },
-    {
       title: "Mushroom Forest",
       displayImage: mushroomForest,
       hoverImage: mushroomForest,
@@ -126,6 +128,8 @@ export const projectsData = [
       description: ", a digital illustration I made in Procreate.",
       category: "2023",
     },
+
+    
     {
       title: "Bluetooth-Controlled Robotic Arm",
       displayImage: roboticArm,
