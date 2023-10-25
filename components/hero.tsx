@@ -21,9 +21,9 @@ export default function Hero() {
 
     console.log('rendered')
 
-    function handleMouseOver({title, hoverImage, page}: {title: string, hoverImage: object, page: string}) {
+    function handleMouseOver({title, hoverImage, page, featured}: {title: string, hoverImage: object, page: string, featured: boolean}) {
         setIsHovering(true);
-        setHoverContent([title, hoverImage, page!=""]);
+        setHoverContent([title, hoverImage, page!="", featured]);
     }
 
     function handleMouseOut() {
@@ -69,7 +69,7 @@ export default function Hero() {
                 onMouseOut={handleMouseOutToggle}
                 >
                 <Image alt='v' src={boxView ? (hoverToggle ? iconListHover : iconList) : (hoverToggle ? iconGridHover : iconGrid)} className='hidden md:inline justify-self-center w-auto h-[1.05rem] transition mt-1 col-span-1'/>
-                <p className='text-primary-400 group-hover:text-[#a99d74] animate-pulse font-abcdiatype text-xs py-[0.15rem] align-middle'>[toggle]</p>
+                <p className='text-primary-400 group-hover:text-[#a99d74] animate-pulse font-abcdiatype text-xs py-[0.15rem] align-middle'>[toggle view]</p>
                 
             </div>
             
@@ -95,13 +95,22 @@ export default function Hero() {
                 <Filters />
                 <hr className={`solid border-primary-0`}></hr>
             </section>
-            <section className={`flex flex-col py-4 -mx-8 px-8 overflow-scroll scrollbar-hide ${!boxView && 'gap-y-3'}`}>
+            <section className={`flex flex-col pt-5 pb-4 -mx-8 px-8 overflow-scroll scrollbar-hide gap-y-3`}>
 
-                {categories.map((category, index) => (<div key={index} className='grid md:grid-cols-[0rem_auto] auto-rows-min'>
+                {[true, false].map((featured, featuredIndex) =>
+                <React.Fragment key={featuredIndex}>
+
+                {featured ?  
+                    <p className='-mb-2.5 font-times text-base text-primary-300 uppercase justify-self-center -mt-1'>✧ featured ✧</p>
+                        
+                    : <p className='-mb-2 font-times text-base text-primary-300 uppercase justify-self-center mt-1'><span className='font-abcfavorit text-basefavorit'>↓</span>&#160;&#160;archive&#160;&#160;<span className='font-abcfavorit text-basefavorit'>↓</span></p>}
+
+                {categories.map((category, categoryIndex) => (<div key={categoryIndex} className='grid md:grid-cols-[0rem_auto] auto-rows-min'>
                     
                     <Label>{category}</Label>
-
-                    <section key={index} className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start'}`}>    
+                
+                    
+                    <section key={categoryIndex} className={`grid grid-cols-2 md:grid-cols-3 ${featured ? 'lg:grid-cols-3 xl:grid-cols-5' : 'lg:grid-cols-4 xl:grid-cols-6'} ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start'}`}>    
 
                         {projectsData.map((project, index) => {
 
@@ -118,14 +127,15 @@ export default function Hero() {
                             </>
 
                             const contentList = <>
-                                <p className=' group-hover:text-secondary-0 text-[.5rem] text-primary-300 font-normal font-abcdiatype mt-1 sm:mt-0.5 transition duration-300 w-4'>{`[${index+1 < 10 ? '0' : ''}${(index+1)}]`}</p>
+                                <p className={`group-hover:text-secondary-0 text-[.5rem] text-primary-300 font-normal font-abcdiatype transition duration-300 w-4 ${featured ? 'mt-0.5' : 'mt-1'}`}>{`[${index+1 < 10 ? '0' : ''}${(index+1)}]`}</p>
 
-                                <p className={` group-hover:text-secondary-0 text-primary-100 whitespace-nowrap text-5xl mr-3 transition duration-300 ${index % 2 == 0 ? 'capitalize font-abcfavorit text-5xlfavorit italic mt-1' : 'uppercase font-times'}`}>{project.title}</p>
+                                {featured ? <p className={` group-hover:text-secondary-0 text-primary-100 whitespace-nowrap mr-3 transition duration-300 group-odd:capitalize group-odd:font-abcfavorit group-odd:text-5xlfavorit group-odd:italic group-odd:-mt-2 group-even:text-5xl group-even:uppercase group-even:font-times`}>{project.title}</p>
+                                :  <p className={` group-hover:text-secondary-0 whitespace-nowrap text-3xl mr-3 transition duration-300 ${index % 2 == 0 ? 'capitalize font-abcfavorit text-[1.81rem] italic mt-0.5' : 'uppercase font-times'} ${featured ? 'text-primary-100' : 'text-primary-100'}`}>{project.title}</p>}
 
                                 <Image 
                                     src={project.displayImage}
                                     alt="project image"
-                                    className='sm:group-hover:invert-[100%] object-contain w-min mt-1 mr-1.5 mb-2 transition duration-300 max-w-[3.5rem]'
+                                    className={`sm:group-hover:invert-[100%] object-contain w-min mr-1.5 mb-2 transition duration-300 ${featured ? 'max-w-[3rem] mt-1' : 'max-w-[3rem] mt-1.5'}`}
                                 />
                             </>
 
@@ -141,9 +151,9 @@ export default function Hero() {
                             
                             return (
                                     
-                                project.category == category && (project.page != "" ? 
+                                ((project.featured && featured && project.category == category) || (!featured && project.category == category)) && (project.page != "" ? 
 
-                                    <Link className={`group flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 md:-mr-2 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
+                                    <Link className={`group flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : `md:flex-row hover:md:scale-[1.02] md:pb-0 ${featured ? 'md:h-12 md:mb-0' : 'md:h-9 md:mb-0 opacity-95'} md:w-auto md:-mr-2 hover:md:bg-yellow-400 hover:md:z-10`} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
                                         onMouseOver= {() => handleMouseOver(project)}
                                         onMouseOut={handleMouseOut}
                                         href={project.page}
@@ -155,7 +165,7 @@ export default function Hero() {
                                     
                                 : 
 
-                                    <div className={`group cursor-help flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:-mr-2 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
+                                    <div className={`group cursor-help flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : `md:flex-row hover:md:scale-[1.02] md:pb-0 ${featured ? 'md:h-12 md:mb-0' : 'md:h-9 md:mb-0 opacity-95'} md:w-auto md:-mr-2 hover:md:bg-yellow-400 hover:md:z-10`} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
                                     onMouseOver= {() => handleMouseOver(project)}
                                     onMouseOut={handleMouseOut}>
 
@@ -164,9 +174,11 @@ export default function Hero() {
                                     </div>)
                                 )
                             })
+                    
                         }
+                
                     </section>
-                </div>))}
+                </div>))}</React.Fragment>)}
             </section>
 
             <AnimatePresence>
@@ -178,7 +190,7 @@ export default function Hero() {
                         exit={{ opacity: 0}}
                         transition={{ duration: 0.2 }}
                         >
-                        <motion.div 
+                        {hoverContent[2] || hoverContent[3] ? <motion.div 
                             animate={{opacity: [1, .75]}}
                             transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1.2}}>
                             
@@ -188,10 +200,16 @@ export default function Hero() {
                                 className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-none h-[15rem] sm:h-[30rem]'
                             />
 
-                            <p className={`px-1  fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-white' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
+                            <p className={`px-1 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-white bg-primary-100' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
                                 {hoverContent[2] ? 'click to open' : "PAGE COMING SOON"}
                             </p>
-                        </motion.div>
+                        </motion.div> : <Image
+                                src={hoverContent[1]}
+                                alt="project image" 
+                                className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-none h-[15rem] sm:h-[30rem]'
+                            />
+                        
+                        }
                     </motion.div>
                 }
             </AnimatePresence>
