@@ -33,7 +33,7 @@ export const links = [
   ] as const;
 
 export const filters = ["work", "school", "me", "design", "ux/tech"] as string[];
-export const categories = ["spotlight", "2023", "2022"] as string[];
+export const categories = ["✮spotlight", "2023", "2022"] as string[];
 
 export const projectsData = [
     {
@@ -43,7 +43,7 @@ export const projectsData = [
       page: "",
       type: ["design", "work", "ux/tech"] as string[],
       description: ", designed products & branding",
-      category: "spotlight",
+      category: "✮spotlight",
     },
     {
       title: "All Of Me, All Of You",
@@ -52,7 +52,7 @@ export const projectsData = [
       page: "",
       type: ["design", "me"] as string[],
       description: ", a multimedia installation",
-      category: "spotlight",
+      category: "✮spotlight",
     },
     {
       title: "Sculptor",
@@ -61,7 +61,7 @@ export const projectsData = [
       page: "",
       type: ["design", "me"] as string[],
       description: ", a digital illustration.",
-      category: "spotlight",
+      category: "✮spotlight",
     },
     {
       title: "Council",
@@ -70,7 +70,7 @@ export const projectsData = [
       page: "",
       type: ["design", "me"] as string[],
       description: ", an oil painting I created on a 24x20 canvas",
-      category: "spotlight",
+      category: "✮spotlight",
     },
     {
       title: "Criterion Cinemas",
@@ -79,7 +79,7 @@ export const projectsData = [
       page: "",
       type: ["design", "school"] as string[],
       description: ", a rebranding project I made for my graphic design class",
-      category: "spotlight",
+      category: "✮spotlight",
     },
 
 
