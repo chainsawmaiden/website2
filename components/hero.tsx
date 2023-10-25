@@ -69,7 +69,7 @@ export default function Hero() {
                 onMouseOut={handleMouseOutToggle}
                 >
                 <Image alt='v' src={boxView ? (hoverToggle ? iconListHover : iconList) : (hoverToggle ? iconGridHover : iconGrid)} className='hidden md:inline justify-self-center w-auto h-[1.05rem] transition mt-1 col-span-1'/>
-                <p className='text-primary-400 group-hover:text-[#a99d74] font-abcdiatype text-xs py-[0.15rem] align-middle'>[toggle]</p>
+                <p className='text-primary-400 group-hover:text-[#a99d74] animate-pulse font-abcdiatype text-xs py-[0.15rem] align-middle'>[toggle]</p>
                 
             </div>
             
@@ -125,7 +125,7 @@ export default function Hero() {
                                 <Image 
                                     src={project.displayImage}
                                     alt="project image"
-                                    className='sm:group-hover:invert-[100%] object-contain w-4/5 sm:w-auto mt-1 mb-0 mr-1.5 sm:mb-2 transition duration-300'
+                                    className='sm:group-hover:invert-[100%] object-contain w-min mt-1 mr-1.5 mb-2 transition duration-300 max-w-[3.5rem]'
                                 />
                             </>
 
@@ -143,7 +143,7 @@ export default function Hero() {
                                     
                                 project.category == category && (project.page != "" ? 
 
-                                    <Link className={`group flex flex-col transition ease-in hover:z-0 hover:scale-105 rounded-sm h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? '' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
+                                    <Link className={`group flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
                                         onMouseOver= {() => handleMouseOver(project)}
                                         onMouseOut={handleMouseOut}
                                         href={project.page}
@@ -155,7 +155,7 @@ export default function Hero() {
                                     
                                 : 
 
-                                    <div className={`group cursor-help flex transition ease-in hover:z-0 hover:scale-105 rounded-sm h-auto pb-2 break-inside-avoid w-full flex-col hover:bg-yellow-100 ${boxView ? '' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
+                                    <div className={`group cursor-help flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : 'md:flex-row hover:md:scale-[1.02] md:h-12 md:w-auto md:pb-0 hover:md:bg-yellow-400 hover:md:z-10'} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
                                     onMouseOver= {() => handleMouseOver(project)}
                                     onMouseOut={handleMouseOut}>
 
