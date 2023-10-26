@@ -103,7 +103,7 @@ export default function Hero() {
                 {featured ?  
                     <p className='-mb-2.5 font-times text-base text-primary-300 uppercase justify-self-center -mt-1'>✧ featured ✧</p>
                         
-                    : <p className='-mb-2 font-times text-base text-primary-300 uppercase justify-self-center mt-1'><span className='font-abcfavorit text-basefavorit'>↓</span>&#160;&#160;archive&#160;&#160;<span className='font-abcfavorit text-basefavorit'>↓</span></p>}
+                    : <p className='-mb-2 font-times text-base text-primary-300 uppercase justify-self-center mt-1'><span className='font-abcfavorit text-basefavorit'>↓</span>&#160;&#160;full archive&#160;&#160;<span className='font-abcfavorit text-basefavorit'>↓</span></p>}
 
                 {categories.map((category, categoryIndex) => (<div key={categoryIndex} className='grid md:grid-cols-[0rem_auto] auto-rows-min'>
                     
