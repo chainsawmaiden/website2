@@ -192,7 +192,7 @@ export default function Hero() {
                         >
                         <div className='fixed flex flex-col gap-y-1 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit'>
                             <motion.div 
-                                animate={hoverContent[2] || hoverContent[3] && {opacity: [1, .75]}}
+                                animate={hoverContent[2] || hoverContent[3] ? {opacity: [1, .75]} : {opacity: 1}}
                                 transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1.2}}
                                 className='max-w-none w-auto h-[15rem] sm:h-[30rem]'
                                 >
