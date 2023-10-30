@@ -21,9 +21,9 @@ export default function Hero() {
 
     console.log('rendered')
 
-    function handleMouseOver({title, hoverImage, page, featured}: {title: string, hoverImage: object, page: string, featured: boolean}) {
+    function handleMouseOver({title, hoverImage, page, featured, description}: {title: string, hoverImage: object, page: string, featured: boolean, description: string}) {
         setIsHovering(true);
-        setHoverContent([title, hoverImage, page!="", featured]);
+        setHoverContent([title, hoverImage, page!="", featured, description]);
     }
 
     function handleMouseOut() {
@@ -135,7 +135,7 @@ export default function Hero() {
                                 <Image 
                                     src={project.displayImage}
                                     alt="project image"
-                                    className={`sm:group-hover:invert-[100%] object-contain w-min mr-1.5 mb-2 transition duration-300 ${featured ? 'max-w-[3rem] mt-1' : 'max-w-[3rem] mt-1.5'}`}
+                                    className={`sm:group-hover:invert-[100%] object-contain w-min mr-1.5 mb-2 transition duration-300 max-w-[2rem] lg:max-w-[3rem] ${featured ? 'mt-1' : 'mt-1.5'}`}
                                 />
                             </>
 
@@ -190,26 +190,31 @@ export default function Hero() {
                         exit={{ opacity: 0}}
                         transition={{ duration: 0.2 }}
                         >
-                        {hoverContent[2] || hoverContent[3] ? <motion.div 
-                            animate={{opacity: [1, .75]}}
-                            transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1.2}}>
-                            
-                            <Image
-                                src={hoverContent[1]}
-                                alt="project image" 
-                                className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-none h-[15rem] sm:h-[30rem]'
-                            />
+                        <div className='fixed flex flex-col gap-y-1 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen'>
+                            <motion.div 
+                                animate={hoverContent[2] || hoverContent[3] && {opacity: [1, .75]}}
+                                transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1.2}}
+                                className='max-w-none w-auto h-[15rem] sm:h-[30rem]'
+                                >
+                                
+                                <Image
+                                    src={hoverContent[1]}
+                                    alt="project image" 
+                                    className='w-fit h-full '
+                                />
 
-                            <p className={`px-1 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-white bg-primary-100' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
-                                {hoverContent[2] ? 'click to open' : "PAGE COMING SOON"}
-                            </p>
-                        </motion.div> : <Image
-                                src={hoverContent[1]}
-                                alt="project image" 
-                                className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto max-w-none h-[15rem] sm:h-[30rem]'
-                            />
+                                {hoverContent[2] || hoverContent[3] && <p className={`px-1 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-white bg-primary-100' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
+                                    {hoverContent[2] ? 'click to open' : "PAGE COMING SOON"}
+                                </p>}
+                            </motion.div>
+
+                            <p className='mx-24 px-1 pt-0.5 hidden sm:block first-letter:capitalize sm:text-center text-basefavorit font-abcfavorit text-secondary-0 bg-primary-100 z-50'>{hoverContent[4].substring(2)}</p>
+
+                        </div>
                         
-                        }
+                        
+                            
+                        
                     </motion.div>
                 }
             </AnimatePresence>
