@@ -190,7 +190,7 @@ export default function Hero() {
                         exit={{ opacity: 0}}
                         transition={{ duration: 0.2 }}
                         >
-                        <div className='fixed flex flex-col gap-y-1 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen'>
+                        <div className='fixed flex flex-col gap-y-1 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-10 sm:px-24'>
                             <motion.div 
                                 animate={hoverContent[2] || hoverContent[3] && {opacity: [1, .75]}}
                                 transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1.2}}
@@ -208,7 +208,7 @@ export default function Hero() {
                                 </p>}
                             </motion.div>
 
-                            <p className='mx-24 px-1 pt-0.5 hidden sm:block first-letter:capitalize sm:text-center text-basefavorit font-abcfavorit text-secondary-0 bg-primary-100 z-50'>{hoverContent[4].substring(2)}</p>
+                            <p className='w-full mx-24 px-1 hidden sm:block first-letter:capitalize sm:text-center font-times text-base text-secondary-0 bg-primary-100 z-50'>{hoverContent[4].substring(2)}</p>
 
                         </div>
                         
