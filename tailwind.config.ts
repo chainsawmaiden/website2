@@ -24,7 +24,7 @@ const config: Config = {
 
       colors: {
         'primary': {
-          0: '#202930',
+          0: '#000000',
           100: "#353C42",
           200: "#6A6E73",
           300: '#75777B',
@@ -36,13 +36,13 @@ const config: Config = {
         },
 
         'secondary': {
-          0: '#F2F1F0',
+          0: '#FFFFFF',
         },
 
         'yellow': {
           100: '#F3EBC7',
-          200: '#F2F1F0',
-          300: '#F2F1F0',
+          200: '#FFFFFF',
+          300: '#FFFFFF',
           400: '#DBAA46',
           450: '#F5CF5E',
           500: '#DBAA46',

@@ -110,7 +110,7 @@ export default function Hero() {
                     <Label>{category}</Label>
                 
                     
-                    <section key={categoryIndex} className={`grid grid-cols-2 md:grid-cols-3 ${featured ? 'lg:grid-cols-3 xl:grid-cols-5' : 'lg:grid-cols-4 xl:grid-cols-6'} ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start'}`}>    
+                    <section key={categoryIndex} className={`grid grid-cols-2 md:grid-cols-3 ${featured ? 'lg:grid-cols-3 xl:grid-cols-4' : 'lg:grid-cols-4 xl:grid-cols-6'} ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start'}`}>    
 
                         {projectsData.map((project, index) => {
 
@@ -190,25 +190,25 @@ export default function Hero() {
                         exit={{ opacity: 0}}
                         transition={{ duration: 0.2 }}
                         >
-                        <div className='fixed flex flex-col gap-y-1 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit'>
+                        <div className='fixed flex flex-col gap-y-1 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit '>
                             <motion.div 
                                 animate={hoverContent[2] || hoverContent[3] ? {opacity: [1, .75]} : {opacity: 1}}
                                 transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1.2}}
-                                className='max-w-none w-auto h-[15rem] sm:h-[30rem]'
+                                className='max-w-none w-auto h-[15rem] sm:h-[30rem] flex max-h-screen'
                                 >
                                 
                                 <Image
                                     src={hoverContent[1]}
                                     alt="project image" 
-                                    className='w-fit h-full '
+                                    className='w-fit max-h-full h-auto self-center'
                                 />
 
-                                {hoverContent[2] || hoverContent[3] && <p className={`px-1 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-white bg-primary-100' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
+                                {(hoverContent[2] || hoverContent[3]) && <p className={`px-1 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-white bg-primary-100' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
                                     {hoverContent[2] ? 'click to open' : "PAGE COMING SOON"}
                                 </p>}
                             </motion.div>
 
-                            <p className='min-w-full px-2 hidden sm:block first-letter:capitalize sm:text-center font-times text-base text-secondary-0 bg-primary-100 z-50'>{hoverContent[4].substring(2)}</p>
+                            <p className='min-w-full px-2 hidden sm:block sm:text-center font-times text-base text-primary-100 bg-secondary-0 z-50'>{hoverContent[4].substring(2)}</p>
 
                         </div>
                         
