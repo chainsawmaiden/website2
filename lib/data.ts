@@ -226,8 +226,8 @@ export const projectsData = [
     },
     {
       title: "Art Portfolio",
-      displayImage: traditionalSized,
-      hoverImage: traditionalSized,
+      displayImage: council,
+      hoverImage: council,
       page: "",
       type: ["art"] as string[],
       description: ", traditional art, digital art",
