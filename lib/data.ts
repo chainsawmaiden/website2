@@ -19,6 +19,7 @@ import youngAndBeautiful from "@/public/young-and-beautiful.jpeg"
 import flowerBoy from "@/public/flower-boy.jpeg"
 import stemToTheSky from "@/public/stem-to-the-sky.gif"
 import stemToTheSkyDisplay from "@/public/stem-to-the-sky-display.png"
+import traditionalSized from "@/public/traditional-sized.gif"
 
 export const links = [
     {
@@ -43,22 +44,12 @@ export const categories = ["2023", "2022", "misc"] as string[];
 
 export const projectsData = [
     {
-      title: "STEMChests",
-      displayImage: stemchests,
-      hoverImage: stemchests,
-      page: "",
-      type: ["design", "work/freelance", "tech"] as string[],
-      description: ", product design, branding, identity, logo",
-      category: "2023",
-      featured: true,
-    },
-    {
       title: "Yale Law School",
       displayImage: questionMark,
       hoverImage: questionMark,
       page: "",
       type: ["design", "tech", "work/freelance"] as string[],
-      description: ", engineering, ui/ux, identity (WIP)",
+      description: ", web, software, ui/ux, identity (WIP)",
       category: "2023",
       featured: false,
     },
@@ -77,10 +68,30 @@ export const projectsData = [
       displayImage: questionMark,
       hoverImage: dayHover,
       page: "",
-      type: ["design", "tech", "work/freelance"] as string[],
+      type: ["design"] as string[],
       description: ", graphic design (WIP)",
       category: "2023",
       featured: false,
+    },
+    {
+      title: "STEMChests",
+      displayImage: stemchests,
+      hoverImage: stemchests,
+      page: "",
+      type: ["design", "work/freelance"] as string[],
+      description: ", product design, branding, identity, logo",
+      category: "2023",
+      featured: true,
+    },
+    {
+      title: "Popcorn* Magazine",
+      displayImage: questionMark,
+      hoverImage: questionMark,
+      page: "",
+      type: ["design"] as string[],
+      description: ", product design, publication, graphic design",
+      category: "2023",
+      featured: true,
     },
     {
       title: "Criterion Cinemas Rebrand",
@@ -179,7 +190,7 @@ export const projectsData = [
       hoverImage: roboticArm,
       page: "https://youtu.be/GPSEP8xgVMI",
       type: ["tech"] as string[],
-      description: ", engineering, robotics",
+      description: ", robotics, arduino",
       category: "2022",
       featured: false,
     },
@@ -212,5 +223,25 @@ export const projectsData = [
       description: ", traditional art, oil (24x20)",
       category: "2022",
       featured: false,
+    },
+    {
+      title: "Art Portfolio",
+      displayImage: traditionalSized,
+      hoverImage: traditionalSized,
+      page: "",
+      type: ["art"] as string[],
+      description: ", traditional art, digital art",
+      category: "misc",
+      featured: true,
+    },
+    {
+      title: "Poster Collection",
+      displayImage: hobbesAndSushiHover,
+      hoverImage: hobbesAndSushiHover,
+      page: "",
+      type: ["design"] as string[],
+      description: ", graphic design",
+      category: "misc",
+      featured: true,
     },
   ] as const;

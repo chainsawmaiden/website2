@@ -49,7 +49,7 @@ export default function Hero() {
     function handleMouseOutToggle() {setHoverToggle(false)}
 
     function Filters() {
-        return (<section className={`flex sticky justify-between px-5 sm:px-24 font-abcfavorit text-basefavorit md:text-lgfavorit min-w-min sm:items-start`}>
+        return (<section className={`flex sticky justify-between px-5 sm:px-24 font-abcfavorit text-basefavorit md:text-lgfavorit min-w-min sm:items-start pt-0.5 md:pt-0`}>
             <p 
                 onClick={() => handleClickAll()}
                 className={`underline cursor-pointer ${myFilters.includes('all') ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in'`}

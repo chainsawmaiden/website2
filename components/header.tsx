@@ -32,8 +32,8 @@ export default function Header() {
 
     <header className='-ml-10 sm:-ml-24 top-0 bg-yellow-300 sticky w-screen transition z-10 cursor-help'
             >
-      <div className='hidden lg:block h-full w-full'>
-        <hr className='solid border-primary-0 mb-3'></hr>
+      <div className='hidden lg:block h-full w-full mt-2'>
+        
         <div className='
         font-light text-primary-0 
         h-fit top-0 w-full translate-x-0
@@ -62,14 +62,14 @@ export default function Header() {
         animate={{height: 'min-content', opacity: 100}}
         exit={{height: 33.2, opacity: 0}}
         transition={{duration: .2}}>   
-        <hr className='solid border-primary-0 mb-0.5'></hr>
+        
         <div className='
         font-light text-primary-0 
         h-fit top-0 w-full translate-x-0
         flex transition flex-wrap gap-x-6 gap-y-1 justify-center md:flex-row flex-col
         md:items-left md:justify-start items-center
         
-        px-5 sm:px-24 md:px-[7.25rem]* py-4
+        px-5 sm:px-24 md:px-[7.25rem]* py-4 -mt-3
         '>
 
           <Link className='font-times tracking-tight font-normal whitespace-nowrap hover:text-yellow-400 transition duration-300 leading-[4rem] text-[3.25rem] md:text-8xl md:leading-[5rem] md:mb-3' href="/" >
@@ -90,13 +90,12 @@ export default function Header() {
         initial={{height: 80, opacity: 0}}
         animate={{height: 'min-content', opacity: 100}}
         transition={{duration: .2}}>     
-        <hr className='solid border-primary-0 mb-0.5'></hr>
         <div className='
         flex justify-between
         font-normal text-primary-0 
         h-fit top-0 w-full
         
-        px-5 sm:px-24 md:px-[7.25rem]*
+        px-5 sm:px-24 md:px-[7.25rem]* mt-0.5
         '>
 
           <Link className='font-times tracking-tight whitespace-nowrap hover:text-yellow-400 transition duration-300 text-2xl' href="/" >
