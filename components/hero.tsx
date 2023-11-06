@@ -107,10 +107,10 @@ export default function Hero() {
 
                 {categories.map((category, categoryIndex) => (<div key={categoryIndex} className='grid md:grid-cols-[0rem_auto] auto-rows-min'>
                     
-                    <Label>{category}</Label>
+                    {(featured && category != "2022" || !featured) && <Label>{category}</Label>}
                 
                     
-                    <section key={categoryIndex} className={`grid grid-cols-2 md:grid-cols-3 ${featured ? 'lg:grid-cols-3 xl:grid-cols-4' : 'lg:grid-cols-4 xl:grid-cols-6'} ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start'}`}>    
+                    <section key={categoryIndex} className={`grid grid-cols-2 md:grid-cols-3 ${featured && categoryIndex == 0 && '-mb-3' } ${featured ? 'lg:grid-cols-3 xl:grid-cols-4' : 'lg:grid-cols-4 xl:grid-cols-6'} ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start'}`}>    
 
                         {projectsData.map((project, index) => {
 
