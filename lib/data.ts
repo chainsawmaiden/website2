@@ -89,7 +89,7 @@ export const projectsData = [
       hoverImage: criterionCinemas,
       page: "",
       type: ["design"] as string[],
-      description: ", identity, branding, logo",
+      description: ", identity, logo",
       category: "2023",
       featured: true,
     },
