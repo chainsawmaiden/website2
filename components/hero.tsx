@@ -17,7 +17,6 @@ export default function Hero() {
     const [hoverContent, setHoverContent] = useState([] as any[]);
     const [myFilters, setMyFilters] = useState(['all'] as string[]);
     const [boxView, setBoxView] = useState(false as boolean);
-    const [hoverToggle, setHoverToggle] = useState(false as boolean);
 
     console.log('rendered')
 
@@ -45,39 +44,28 @@ export default function Hero() {
         console.log(myFilters)
     }
 
-    function handleMouseOverToggle() {setHoverToggle(true)}
-    function handleMouseOutToggle() {setHoverToggle(false)}
-
     function Filters() {
         return (<section className={`flex sticky justify-between px-5 sm:px-24 font-abcfavorit text-basefavorit md:text-lgfavorit min-w-min sm:items-start pt-0.5 md:pt-0`}>
             <p 
                 onClick={() => handleClickAll()}
-                className={`underline cursor-pointer ${myFilters.includes('all') ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in'`}
+                className={`underline* cursor-pointer ${myFilters.includes('all') ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in'`}
             >{myFilters.includes('all') ? 'all ❤︎' : 'all ♡'}</p>
                     
             {filters.map((f, index) => (
                 <p 
                     onClick={() => handleClick(f)}
-                    className={`underline cursor-pointer ${myFilters.includes(f) ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in`} 
+                    className={`underline* cursor-pointer ${myFilters.includes(f) ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in`} 
                     key={index}>{f}</p>
             ))}
-
-            <div 
-                className='hidden cursor-pointer group md:flex flex-row justify-center gap-x-0.5' 
-                onClick={handleToggle}
-                onMouseOver={handleMouseOverToggle}
-                onMouseOut={handleMouseOutToggle}
-                >
-                <Image alt='v' src={boxView ? (hoverToggle ? iconListHover : iconList) : (hoverToggle ? iconGridHover : iconGrid)} className='hidden md:inline justify-self-center w-auto h-[1.05rem] transition mt-1 col-span-1'/>
-                <p className='text-primary-400 group-hover:text-[#a99d74] animate-pulse font-abcdiatype text-xs py-[0.15rem] align-middle'>[toggle view]</p>
-                
-            </div>
+            <p 
+                onClick={() => handleToggle()}
+                className={`underline* sm:block cursor-pointer text-basefavorit md:text-lgfavorit text-primary-100 hover:text-yellow-700 whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in`}>[toggle view]</p>
             
         </section>)
     }
 
     function Label({children} : {children: React.ReactNode}) {
-        return <motion.div layout> <div className="col-span-full md:col-span-1 md:flex md:flex-col-reverse md:-ml-[2rem] justify-start items-start md:-rotate-180 md:h-auto md:w-min"><p className='md:mb-1 font-abcfavorit text-basefavorit text-primary-400 uppercase md:[writing-mode:vertical-lr] whitespace-nowrap'>{children}</p></div></motion.div>
+        return <motion.div layout> <div className="col-span-full md:col-span-1 md:flex md:flex-col-reverse md:-ml-[2rem] justify-start items-start md:-rotate-180 md:h-auto md:w-min"><p className='md:mb-1 font-times text-base text-primary-400 uppercase md:[writing-mode:vertical-lr] whitespace-nowrap'>{children}</p></div></motion.div>
     }
 
     return (
@@ -101,9 +89,9 @@ export default function Hero() {
                 <React.Fragment key={featuredIndex}>
 
                 {featured ?  
-                    <p className='-mb-2.5 font-times text-base text-primary-300 uppercase justify-self-center -mt-1'>✧ featured ✧</p>
+                    <p className='-mb-2.5 font-times text-base text-primary-400 uppercase justify-self-center -mt-1'>✧ featured ✧</p>
                         
-                    : <p className='-mb-2 font-times text-base text-primary-300 uppercase justify-self-center mt-1'><span className='font-abcfavorit text-basefavorit'>↓</span>&#160;&#160;full archive&#160;&#160;<span className='font-abcfavorit text-basefavorit'>↓</span></p>}
+                    : <p className='-mb-2 font-times text-base text-primary-400 uppercase justify-self-center mt-1'><span className='font-abcfavorit text-basefavorit'>↓</span>&#160;&#160;full archive&#160;&#160;<span className='font-abcfavorit text-basefavorit'>↓</span></p>}
 
                 {categories.map((category, categoryIndex) => (<div key={categoryIndex} className='grid md:grid-cols-[0rem_auto] auto-rows-min'>
                     

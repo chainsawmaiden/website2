@@ -12,19 +12,23 @@ export default function Header() {
   function handleMouseOver() {setExpand(true)}
   function handleMouseOut() {setExpand(false)}
 
-  const headerText = <p className="md:min-w-[31rem] font-light font-times leading-snug text-primary-100">
+  const oldHeaderText = <p className="md:min-w-[31rem] font-light font-times leading-snug text-primary-100">
   ...is a <span className='text-xs text-yellow-400 align-middle mr-0.5'>⊹</span>designer and engineer<span className='text-xs text-yellow-400 align-middle ml-0.5'>⊹</span> that likes to build <span className="pf">creative</span> and <span className="pf">engaging</span> things, both digital and physical. He is currently based in New Haven, CT, where he is double majoring in <span className="pf">art</span> and <span className="pf">computer science</span> at <span className='pf'>Yale University</span> &apos;27.
+  </p>
+
+  const headerText = <p className="md:min-w-[31rem] font-light font-times leading-snug text-primary-100">
+  ...is a <span className='text-xs text-yellow-400 align-middle mr-0.5'>⊹</span>designer and engineer<span className='text-xs text-yellow-400 align-middle ml-0.5'>⊹</span> that likes to build creative and engaging things, both digital and physical. He is currently based in New Haven, CT, where he is double majoring in art and computer science at Yale University &apos;27.
   </p>
 
   const navBar = <nav>
   <ul className='flex flex-row justify-center gap-x-1 min-w-min text-primary-100 md:justify-start'>
     {links.map((link, index) => (
       <li key={index} className='flex flex-row gap-x-1 min-w-min sm:justify-start'>
-        <Link className='underline hover:text-yellow-400 transition font-abcfavorit text-basefavorit sm:text-lgfavorit capitalize transition-duration-[300ms] font-normal' href={link.href} target={link.newTab ? "_blank" : "_self"}>{link.name}</Link>
+        <Link className='underline* hover:text-yellow-400 transition font-abcfavorit text-basefavorit sm:text-lgfavorit capitalize transition-duration-[300ms] font-normal' href={link.href} target={link.newTab ? "_blank" : "_self"}>{link.name}</Link>
         <p>{index < links.length ? ' / ' : ''}</p>    
       </li>
     ))}
-    <li><a className='flex flex-row underline hover:text-yellow-400 transition font-abcfavorit text-basefavorit sm:text-lgfavorit capitalize transition-duration-[300ms] font-normal' href='/aditya-das-cv.pdf' target='_blank' rel="noopener noreferrer">CV</a></li>
+    <li><a className='flex flex-row underline* hover:text-yellow-400 transition font-abcfavorit text-basefavorit sm:text-lgfavorit capitalize transition-duration-[300ms] font-normal' href='/aditya-das-cv.pdf' target='_blank' rel="noopener noreferrer">CV</a></li>
   </ul>
 </nav>
 
