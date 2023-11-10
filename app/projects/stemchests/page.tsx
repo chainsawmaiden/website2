@@ -61,7 +61,7 @@ export default function Page() {
       <p className='w-full'><span className='lf '>OVERVIEW: </span>Branding and product design I made for my non-profit, <Lnk href='https://www.stemchests.com/' >STEMChests</Lnk>. The non-profit model revolved around selling science kits and using all profits to donate more kits to students in underprivileged communities. So far, we have crowdfunded over $3,600 and distributed over 1000 kits.</p>
       <hr className='border-solid'></hr>
 
-      <Gallery cols={2}>
+      <Gallery cols='2'>
         {gallery1.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
       </Gallery>
       
@@ -73,7 +73,7 @@ export default function Page() {
 
       <hr className='border-solid'></hr>
 
-      <Gallery cols={3}>
+      <Gallery cols='3'>
         {gallery2.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
       </Gallery>
       
@@ -81,7 +81,7 @@ export default function Page() {
       <p className='w-full'><span className='lf '>LOGO & BRANDING:</span> I chose vibrant colors and legible yet playful fonts to represent STEMChests. Accessibility was a big concern, since we wanted young students to be able to use the kits on their own. This meant big font sizes, detailed illustrations, and very simple instructions.</p>
       <hr className='border-solid'></hr>
       
-      <Gallery cols={4}>
+      <Gallery cols='4'>
         {gallery3.map((img, i) => <ImageModal key={i} src={img} />)}
       </Gallery>
 

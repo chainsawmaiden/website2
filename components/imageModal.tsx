@@ -16,7 +16,7 @@ export default function ImageModal({src, rounded}: {src: any, rounded?: boolean}
                 
             <Image
             onClick={() => setExpand(true)} 
-            src={src} alt='project image' className={`cursor-zoom-in inline-flex w-fit h-fit max-h-full max-w-full m-auto ${rounded && 'rounded-md'}`}  />
+            src={src} alt='project image' className={`cursor-zoom-in inline-flex w-auto  ${rounded && 'rounded-md'}`}  />
         </>
     )
 }
