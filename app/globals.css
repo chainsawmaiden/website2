@@ -22,13 +22,25 @@
 
 @layer base {
   .pf {
-    @apply font-abcfavorit text-basefavorit sm:text-lgfavorit tracking-normal;
+    @apply font-times text-lgfavorit tracking-normal leading-5;
+  }
+}
+
+@layer base {
+  .bt {
+    @apply font-times text-base tracking-normal leading-4;
   }
 }
 
 @layer base {
   .bf {
     @apply font-abcfavorit text-basefavorit tracking-normal;
+  }
+}
+
+@layer base {
+  .lf {
+    @apply font-abcfavorit text-[.96rem] tracking-normal leading-5 font-normal;
   }
 }
 
@@ -230,6 +242,13 @@
 
 @font-face {
   font-family: "abcfavorit";
+  src: url("../public/fonts/ABCFavoritEdu-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abcfavorit";
   src: url("../public/fonts/ABCFavoritEdu-Regular.otf");
   font-weight: 400;
   font-style: normal;
@@ -241,6 +260,14 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "abcfavorit";
+  src: url("../public/fonts/ABCFavoritEdu-LightItalic.otf");
+  font-weight: 300;
+  font-style: italic;
+}
+
 
 @font-face {
   font-family: "abcfavorit";

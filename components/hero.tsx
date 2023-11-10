@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 import Link from 'next/link';
@@ -11,6 +11,30 @@ import iconList from '@/public/icons/icon-list.png'
 import iconListHover from '@/public/icons/icon-list-hover.png'
 import iconGrid from '@/public/icons/icon-grid.png'
 import iconGridHover from '@/public/icons/icon-grid-hover.png'
+import HoverImage from './hoverImage';
+
+function useScrollDirection() {
+    const [scrollDirection, setScrollDirection] = useState("up");
+  
+    useEffect(() => {
+      let lastScrollY = window.pageYOffset;
+  
+      const updateScrollDirection = () => {
+        const scrollY = window.pageYOffset;
+        const direction = scrollY > lastScrollY ? "down" : "up";
+        if (direction !== scrollDirection && (scrollY - lastScrollY > 1 || scrollY - lastScrollY < -10)) {
+          setScrollDirection(direction);
+        }
+        lastScrollY = scrollY > 0 ? scrollY : 0;
+      };
+      window.addEventListener("scroll", updateScrollDirection); // add event listener
+      return () => {
+        window.removeEventListener("scroll", updateScrollDirection); // clean up
+      }
+    }, [scrollDirection]);
+  
+    return scrollDirection;
+  };
 
 export default function Hero() {
     const [isHovering, setIsHovering] = useState(false as boolean);
@@ -18,11 +42,13 @@ export default function Hero() {
     const [myFilters, setMyFilters] = useState(['all'] as string[]);
     const [boxView, setBoxView] = useState(false as boolean);
 
+    const scrollDirection = useScrollDirection();
+
     console.log('rendered')
 
-    function handleMouseOver({title, hoverImage, page, featured, description}: {title: string, hoverImage: object, page: string, featured: boolean, description: string}) {
+    function handleMouseOver({title, hoverImage, page, description}: {title: string, hoverImage: object, page: string, description: string}) {
         setIsHovering(true);
-        setHoverContent([title, hoverImage, page!="", featured, description]);
+        setHoverContent([title, hoverImage, page!="", description]);
     }
 
     function handleMouseOut() {
@@ -45,27 +71,27 @@ export default function Hero() {
     }
 
     function Filters() {
-        return (<section className={`flex sticky justify-between px-5 sm:px-24 font-abcfavorit text-basefavorit md:text-lgfavorit min-w-min sm:items-start pt-0.5 md:pt-0`}>
+        return (<section className={`flex lowercase justify-between px-5 md:px-20 pf min-w-min sm:items-start `}>
             <p 
                 onClick={() => handleClickAll()}
-                className={`underline* cursor-pointer ${myFilters.includes('all') ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in'`}
+                className={`underline* cursor-pointer ${myFilters.includes('all') ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition duration-300 ease-in'`}
             >{myFilters.includes('all') ? 'all ❤︎' : 'all ♡'}</p>
                     
             {filters.map((f, index) => (
                 <p 
                     onClick={() => handleClick(f)}
-                    className={`underline* cursor-pointer ${myFilters.includes(f) ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in`} 
+                    className={`underline* cursor-pointer ${myFilters.includes(f) ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition duration-300] ease-in`} 
                     key={index}>{f}</p>
             ))}
             <p 
                 onClick={() => handleToggle()}
-                className={`underline* sm:block cursor-pointer text-basefavorit md:text-lgfavorit text-primary-100 hover:text-yellow-700 whitespace-nowrap justify-self-center transition transition-duration-[300ms] ease-in`}>[toggle view]</p>
+                className={`underline* sm:block cursor-pointer text-primary-100 hover:text-yellow-700 whitespace-nowrap justify-self-center transition duration-300 ease-in lowercase`}>[toggle view]</p>
             
         </section>)
     }
 
     function Label({children} : {children: React.ReactNode}) {
-        return <motion.div layout> <div className="col-span-full md:col-span-1 md:flex md:flex-col-reverse md:-ml-[2rem] justify-start items-start md:-rotate-180 md:h-auto md:w-min"><p className='md:mb-1 font-times text-base text-primary-400 uppercase md:[writing-mode:vertical-lr] whitespace-nowrap'>{children}</p></div></motion.div>
+        return <div className='hidden md:inline'><div className="bf font-abcfavorit col-span-full md:col-span-1 md:flex md:flex-col-reverse md:-ml-[2rem] justify-start items-start md:-rotate-180 md:h-auto md:w-min"><p className='-mb-0.5 md:mb-0 text-primary-400 uppercase md:[writing-mode:vertical-lr] whitespace-nowrap'>{children}</p></div></div>
     }
 
     return (
@@ -75,30 +101,21 @@ export default function Hero() {
         // 1. filters (+ toggle button), nested in div function to add just a tiny bit of formatting stuff
         // 2. goes through categories and for each category...
         // 3. creates a two-column table, one column with the label and the other with the items in it
-        //      sidenote: if md or smaller, the label just gets added to the flex col and is placed horizontally
+        //      sidenote: if lg or smaller, the label just gets added to the flex col and is placed horizontally
         // 4. sooooo bad so bad so bad but yeah thats basically what it does and then theres some other super jank stuff
 
         <>
-            <section className='bg-yellow-200 block sticky mt-0 w-screen md:pt-0.5 -ml-10 sm:-ml-24'>
+            <section className={`block w-screen z-10 mt-1 -ml-5 md:-ml-20 sticky ${scrollDirection === 'down' ? '-top-[3.75rem] md:-top-12' : ' top-9 md:top-12'} transition-all duration-500`}>
                 <Filters />
-                <hr className={`solid border-primary-0`}></hr>
             </section>
-            <section className={`flex flex-col pt-5 pb-4 -mx-8 px-8 overflow-scroll scrollbar-hide gap-y-3`}>
-
-                {[true, false].map((featured, featuredIndex) =>
-                <React.Fragment key={featuredIndex}>
-
-                {featured ?  
-                    <p className='-mb-2.5 font-times text-base text-primary-400 uppercase justify-self-center -mt-1'>✧ featured ✧</p>
-                        
-                    : <p className='-mb-2 font-times text-base text-primary-400 uppercase justify-self-center mt-1'><span className='font-abcfavorit text-basefavorit'>↓</span>&#160;&#160;full archive&#160;&#160;<span className='font-abcfavorit text-basefavorit'>↓</span></p>}
+            <section className={`flex flex-col h-auto pt-2 sm:pt-4 -mx-8 px-8 gap-y-3 ${boxView ? 'pb-2' : 'pb-6'}`}>
 
                 {categories.map((category, categoryIndex) => (<div key={categoryIndex} className='grid md:grid-cols-[0rem_auto] auto-rows-min'>
                     
-                    {(featured && category != "2022" || !featured) && <Label>{category}</Label>}
+                    <Label>{category}</Label>
                 
                     
-                    <section key={categoryIndex} className={`grid grid-cols-2 md:grid-cols-3 ${featured && categoryIndex == 0 && '-mb-3' } ${featured ? 'lg:grid-cols-3 xl:grid-cols-4' : 'lg:grid-cols-4 xl:grid-cols-6'} ${!boxView && 'md:grid-cols-none md:flex md:flex-wrap md:font-normal md:gap-x-4 md:justify-start'}`}>    
+                    <section key={categoryIndex} className={` ${!boxView ? 'grid-cols-none flex flex-wrap font-normal gap-x-2 sm:gap-x-4 justify-start' : 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'}`}>    
 
                         {projectsData.map((project, index) => {
 
@@ -110,38 +127,31 @@ export default function Hero() {
                                     alt="project image"
                                     className='p-[7.5%] aspect-square object-contain w-auto transition duration-300'
                                 />
-                            
-                                <p className='text-primary-100 mr-1.5 uppercase font-abcfavorit text-base leading-5 sm:mr-3 [overflow-wrap: break-word] transition duration-300'>{project.title}<span className='font-times normal-case'>{project.description}</span></p>
+                                                
+                                <p className='text-primary-100 mr-1.5 uppercase lf sm:mr-3 [overflow-wrap: break-word] transition duration-300'>{project.title}<span className='pf lowercase'>{project.description}</span></p>
                             </>
 
-                            const contentList = <>
-                                <p className={`group-hover:text-secondary-0 text-[.5rem] text-primary-300 font-normal font-abcdiatype transition duration-300 w-4 ${featured ? 'mt-0.5' : 'mt-1'}`}>{`[${index+1 < 10 ? '0' : ''}${(index+1)}]`}</p>
+                            const contentList = <div className='flex h-content mb-0 sm:mb-1 -translate-y-0.5'>
+                                <p className={`group-hover:text-yellow-400 text-[.5rem] text-primary-300 font-abcdiatype transition duration-300 w-4 mt-0.5 sm:mt-0`}>{`[${index+1 < 10 ? '0' : ''}${(index+1)}]`}</p>
 
-                                {featured ? <p className={` group-hover:text-secondary-0 text-primary-100 whitespace-nowrap mr-3 transition duration-300 group-odd:capitalize group-odd:font-abcfavorit group-odd:text-5xlfavorit group-odd:italic group-odd:-mt-2 group-even:text-5xl group-even:uppercase group-even:font-times`}>{project.title}</p>
-                                :  <p className={` group-hover:text-secondary-0 whitespace-nowrap text-3xl mr-3 transition duration-300 ${index % 2 == 0 ? 'capitalize font-abcfavorit text-[1.81rem] italic mt-0.5' : 'uppercase font-times'} ${featured ? 'text-primary-100' : 'text-primary-100'}`}>{project.title}</p>}
+                                <p className={`group-hover:text-yellow-400 text-primary-100 whitespace-nowrap mr-1.5 sm:mr-3 sm:mt-2 transition duration-300 ${true ? `font-abcfavorit text-2xl sm:text-5xlfavorit italic*` : `text-5xl uppercase font-times`}`}>{project.title}</p>
 
                                 <Image 
                                     src={project.displayImage}
                                     alt="project image"
-                                    className={`sm:group-hover:invert-[100%] object-contain w-min mr-1.5 mb-2 transition duration-300 max-w-[2rem] lg:max-w-[3rem] ${featured ? 'mt-1' : 'mt-1.5'}`}
+                                    className={`sm:group-hover:opacity-50 object-contain w-min transition duration-300 max-w-[2rem] sm:max-w-[3rem] max-h-5 mt-1 sm:mt-0 sm:mr-1.5 sm:max-h-10`}
                                 />
-                            </>
+                            </div>
 
                             const content = boxView ? <>{contentGrid}</> : <>
-                                <div className='hidden md:inline-flex'>
-                                    {contentList}
-                                </div>
-
-                                <div className='inline md:hidden'>
-                                    {contentGrid}
-                                </div>
+                                {contentList}
                             </>;
                             
                             return (
                                     
-                                ((project.featured && featured && project.category == category) || (!featured && project.category == category)) && (project.page != "" ? 
+                                project.category == category && (project.page != "" ? 
 
-                                    <Link className={`group flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : `md:flex-row hover:md:scale-[1.02] md:pb-0 ${featured ? 'md:h-12 md:mb-0' : 'md:h-9 md:mb-0 opacity-95'} md:w-auto md:-mr-2 hover:md:bg-yellow-400 hover:md:z-10`} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
+                                    <Link className={`group flex transition duration-500 h-auto w-full ${boxView ? 'break-inside-avoid rounded-sm flex-col hover:z-0 pb-2 -mt-1 hover:scale-[1.03]' : `flex-row hover:scale-[1.02]* py-0 h-fit -mb-1 sm:mb-0 w-min`} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex visible') : (boxView ? 'hidden' : 'invisible flex')}`}
                                         onMouseOver= {() => handleMouseOver(project)}
                                         onMouseOut={handleMouseOut}
                                         href={project.page}
@@ -153,7 +163,7 @@ export default function Hero() {
                                     
                                 : 
 
-                                    <div className={`group cursor-help flex flex-col transition ease-in hover:z-0 hover:scale-105 h-auto pb-2 break-inside-avoid w-full hover:bg-yellow-100 ${boxView ? 'rounded-sm' : `md:flex-row hover:md:scale-[1.02] md:pb-0 ${featured ? 'md:h-12 md:mb-0' : 'md:h-9 md:mb-0 opacity-95'} md:w-auto md:-mr-2 hover:md:bg-yellow-400 hover:md:z-10`} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex md:visible') : (boxView ? 'hidden' : 'hidden md:invisible md:flex')}`}
+                                    <div className={`group cursor-help flex transition duration-500 h-auto w-full ${boxView ? 'break-inside-avoid rounded-sm flex-col hover:z-0 pb-2 -mt-1 hover:scale-[1.03]' : `flex-row hover:scale-[1.02]* py-0 h-fit -mb-1 sm:mb-0 w-min`} ${myFilters.includes('all') || myFilters.some((r:string) => project.type.includes(r)) ? (boxView ? 'flex' : 'flex visible') : (boxView ? 'hidden' : 'invisible flex')}`}
                                     onMouseOver= {() => handleMouseOver(project)}
                                     onMouseOut={handleMouseOut}>
 
@@ -166,46 +176,10 @@ export default function Hero() {
                         }
                 
                     </section>
-                </div>))}</React.Fragment>)}
+                </div>))}
             </section>
 
-            <AnimatePresence>
-                {isHovering && 
-                    <motion.div
-                        className='pointer-events-none'
-                        initial={{ opacity: 0}}
-                        animate={{ opacity: 1}}
-                        exit={{ opacity: 0}}
-                        transition={{ duration: 0.2 }}
-                        >
-                        <div className='fixed flex flex-col gap-y-1 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit '>
-                            <motion.div 
-                                animate={hoverContent[2] || hoverContent[3] ? {opacity: [1, .75]} : {opacity: 1}}
-                                transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1.2}}
-                                className='max-w-none w-auto h-[15rem] sm:h-[30rem] flex'
-                                >
-                                
-                                <Image
-                                    src={hoverContent[1]}
-                                    alt="project image" 
-                                    className='w-auto max-h-full h-auto self-center'
-                                />
-
-                                {(hoverContent[2] || hoverContent[3]) && <p className={`px-1 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 uppercase whitespace-nowrap z-20 ${hoverContent[2] ? 'text-base font-times text-white bg-primary-100' : 'text-basefavorit font-abcfavorit text-primary-100 bg-secondary-0' }`}>
-                                    {hoverContent[2] ? 'click to open' : "PAGE COMING SOON"}
-                                </p>}
-                            </motion.div>
-
-                            <p className='min-w-full px-2 hidden sm:block sm:text-center font-times text-base text-primary-100 bg-secondary-0 z-50'>{hoverContent[4].substring(2)}</p>
-
-                        </div>
-                        
-                        
-                            
-                        
-                    </motion.div>
-                }
-            </AnimatePresence>
+            <HoverImage isHovering={isHovering} hoverContent={hoverContent} />
             
         </>
     )

@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
 
     extend: {
+
       fontFamily: {
         'abcdiatype': ['abcdiatype'],
         'abcsocialextended': ['abcsocialextended'],
