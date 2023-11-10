@@ -93,7 +93,7 @@ export default function Page() {
       
 
       <hr className='border-solid '></hr>
-      <Link href='/' className='lf'>All Projects -></Link>
+      <Link href='/' className='lf'>All Projects →</Link>
       <hr className='border-solid '></hr>
       
     </section>
