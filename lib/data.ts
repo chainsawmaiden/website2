@@ -137,7 +137,7 @@ export const projectsData = [
     },
     {
       title: "17o1 Records",
-      displayImage: seventeenohone,
+      displayImage: questionMark,
       hoverImage: seventeenohone,
       page: "",
       type: ["design"] as string[],

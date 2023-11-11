@@ -15,6 +15,7 @@ const config: Config = {
         'abcsocialextended': ['abcsocialextended'],
         'abcfavorit': ['abcfavorit'],
         'times': ["Times New Roman"],
+        'arial': ["Arial"],
       },
 
       fontSize: {

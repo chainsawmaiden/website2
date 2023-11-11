@@ -7,8 +7,8 @@ export default function ProjectsLayout({
     children: React.ReactNode
   }) {
     return (
-        <SidebarLayout exclude={0}>
-            <section className='pf flex flex-col gap-y-2 h-full'>
+        <SidebarLayout>
+            <section className='flex pf flex-col pr-2 justify-items-stretch gap-y-2 sm:gap-y-4 h-full w-full overflow-clip mb-20 mt-1 sm:mt-0'>
                 {children}
             </section>
         </SidebarLayout>

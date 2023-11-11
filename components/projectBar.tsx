@@ -40,7 +40,7 @@ export default function ProjectBar({exclude} : {exclude? : number}) {
                             
             return (
                                     
-            project.category != "upcoming" && (project.page != "" ? 
+            project.category != "upcoming" && index != exclude && (project.page != "" ? 
 
             <Link key={index} className={`group flex transition duration-500 h-auto w-full break-inside-avoid rounded-sm flex-col hover:z-0 hover:scale-[1.03] -mt-1 `}
                 onMouseOver= {() => handleMouseOver(project)}

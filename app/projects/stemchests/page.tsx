@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     
-    <section className='flex flex-col pr-2 justify-items-stretch gap-y-2 sm:gap-y-4 h-full w-full overflow-clip mb-20 mt-1 sm:mt-0'>
+    <>
       
       <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-2'>Project: STEMChests</h1>
       <p className='w-full'><span className='lf '>OVERVIEW: </span>Branding and product design I made for my non-profit, <Lnk href='https://www.stemchests.com/' >STEMChests</Lnk>. The non-profit model revolved around selling science kits and using all profits to donate more kits to students in underprivileged communities. So far, we have crowdfunded over $3,600 and distributed over 1000 kits.</p>
@@ -96,6 +96,6 @@ export default function Page() {
       <Link href='/' className='lf'>All Projects →</Link>
       <hr className='border-solid '></hr>
       
-    </section>
+    </>
   )
 }

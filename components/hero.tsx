@@ -91,7 +91,7 @@ export default function Hero() {
     }
 
     function Label({children} : {children: React.ReactNode}) {
-        return <div className='hidden md:inline'><div className="bf font-abcfavorit col-span-full md:col-span-1 md:flex md:flex-col-reverse md:-ml-[2rem] justify-start items-start md:-rotate-180 md:h-auto md:w-min"><p className='-mb-0.5 md:mb-0 text-primary-400 uppercase md:[writing-mode:vertical-lr] whitespace-nowrap'>{children}</p></div></div>
+        return <div className='hidden md:inline'><div className="bf col-span-full md:col-span-1 md:flex md:flex-col-reverse md:-ml-[2rem] justify-start items-start md:-rotate-180 md:h-auto md:w-min"><p className='-mb-0.5 md:mb-0 text-primary-400 uppercase md:[writing-mode:vertical-lr] whitespace-nowrap'>{children}</p></div></div>
     }
 
     return (
