@@ -74,7 +74,7 @@ export default function Page() {
 
       <p className='w-full'><span className='lf '>THE BOX: </span>The biggest two constraints for designing the boxes were an extremely tight budget constraint (we wanted our product to cost less than $5 total for both the box itself and the parts inside, meaning that the box and any decorations would have to cost less than $1) and the need for us to make every single product by hand (a.k.a. no factories). With both of these extreme constraints, I opted for a simple (and cheap) design that emphasized the handmade quality of the boxes. Taking inspiration from Amazon's effective packaging and the unintentional green-brown color harmony between our STEMChests logo logo and the box, I was able to create an easily recognizable product exterior that cost only $.43!</p>
 
-      <p>After this, I gave 25 "test boxes" to families from various different backgrounds and asked them to provide feedback for the kit so we could assess user pain points. The primary pain point was  this helped me make some finishing touches to the instruction booklets and product to make it more accessible!</p>
+      <p>After this, I gave 25 "test boxes" to families from various different backgrounds and asked them to provide feedback for the kit, which helped me assess user pain points and helped me make some finishing touches to the instruction booklets and product to make it more accessible!</p>
 
       <Gallery cols='sm:grid-cols-3' caption='Our logo in action!'>
         {gallery2.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
