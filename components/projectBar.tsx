@@ -3,9 +3,7 @@
 import React, {useState} from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import { filters, projectsData, categories } from '@/lib/data';
-import { motion, AnimatePresence } from 'framer-motion';
-import HoverImage from './hoverImage';
+import { projectsData } from '@/lib/data';
 
 export default function ProjectBar({exclude} : {exclude? : number}) {
     const [isHovering, setIsHovering] = useState(false as boolean);
@@ -66,8 +64,6 @@ export default function ProjectBar({exclude} : {exclude? : number}) {
                     
         }
         </section>
-
-        <HoverImage isHovering={isHovering} hoverContent={hoverContent}  /> 
     </>
     )
 
