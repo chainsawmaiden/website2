@@ -21,6 +21,8 @@ import stemToTheSky from "@/public/stem-to-the-sky.gif"
 import stemToTheSkyDisplay from "@/public/stem-to-the-sky-display.png"
 import traditionalSized from "@/public/traditional-sized.gif"
 
+import popcornExterior from "@/public/popcorn/exterior-front.png"
+
 export const links = [
     {
       name: "About",
@@ -40,7 +42,7 @@ export const links = [
   ] as const;
 
 export const filters = ["design", "tech", "art"] as string[];
-export const categories = ["2023", "2022", "misc", "upcoming"] as string[];
+export const categories = ["select", "bonus", "upcoming"] as string[];
 
 export const projectsData = [
     {
@@ -50,17 +52,17 @@ export const projectsData = [
       page: "/projects/stemchests",
       type: ["design"] as string[],
       description: ", product design, branding, identity, logo",
-      category: "2023",
+      category: "select",
       featured: true,
     },
     {
       title: "Popcorn* Magazine",
-      displayImage: questionMark,
-      hoverImage: questionMark,
-      page: "",
+      displayImage: popcornExterior,
+      hoverImage: popcornExterior,
+      page: "/projects/popcorn",
       type: ["design"] as string[],
       description: ", product design, publication, graphic design",
-      category: "2023",
+      category: "select",
       featured: true,
     },
     {
@@ -70,10 +72,9 @@ export const projectsData = [
       page: "",
       type: ["design"] as string[],
       description: ", identity, logo",
-      category: "2023",
+      category: "select",
       featured: true,
     },
-
     {
       title: "All Of Me, All Of You",
       displayImage: allOfMeAllOfYou,
@@ -81,7 +82,7 @@ export const projectsData = [
       page: "",
       type: ["art"] as string[],
       description: ", multimedia installation, traditional art, oil",
-      category: "2022",
+      category: "bonus",
       featured: false,
     },
     {
@@ -90,8 +91,8 @@ export const projectsData = [
       hoverImage: roboticArm,
       page: "https://youtu.be/GPSEP8xgVMI",
       type: ["tech"] as string[],
-      description: ", robotics, arduino",
-      category: "2022",
+      description: ", robotics, arduino, social robotics",
+      category: "bonus",
       featured: false,
     },
     {
@@ -101,7 +102,7 @@ export const projectsData = [
       page: "",
       type: ["art"] as string[],
       description: ", traditional art, digital art",
-      category: "misc",
+      category: "bonus",
       featured: true,
     },
     {
@@ -111,7 +112,7 @@ export const projectsData = [
       page: "",
       type: ["design"] as string[],
       description: ", graphic design",
-      category: "misc",
+      category: "bonus",
       featured: true,
     },
 

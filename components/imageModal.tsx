@@ -3,7 +3,7 @@
 import React, {useState} from 'react'
 import Image from 'next/image'
 
-export default function ImageModal({src, rounded}: {src: any, rounded?: boolean}) {
+export default function ImageModal({src, rounded, maxh}: {src: any, rounded?: boolean, maxh?: string}) {
     const [expand, setExpand] = useState(false as boolean)
 
     return (
@@ -16,7 +16,7 @@ export default function ImageModal({src, rounded}: {src: any, rounded?: boolean}
                 
             <Image
             onClick={() => setExpand(true)} 
-            src={src} alt='project image' className={`cursor-zoom-in inline-flex w-auto  ${rounded && 'rounded-md'}`}  />
+            src={src} alt='project image' className={`cursor-zoom-in inline-flex w-auto ${rounded && 'rounded-md'} ${maxh}`}  />
         </>
     )
 }

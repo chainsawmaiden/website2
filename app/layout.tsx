@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='px-5 md:px-20 bg-secondary-0 body-font h-screen font-normal font-times selection:bg-yellow-700 overflow-x-clip scrollbar-hide'>
+      <body className='px-5 md:px-20 bg-secondary-0 body-font h-screen font-normal font-times selection:bg-yellow-700 overflow-x-clip '>
         {children}
       </body>
     </html>
