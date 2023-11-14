@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Aditya Das',
-  description: 'Who is Aditya?',
+  description: 'A portfolio and/or digital shrine that Aditya Das has built for himself.',
   
 }
 

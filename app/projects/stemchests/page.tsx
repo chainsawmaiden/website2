@@ -41,7 +41,7 @@ import ProjectOverview from '@/components/projectOverview'
 
 export const metadata: Metadata = {
   title: 'STEMChests - Aditya Das',
-  description: 'Who is Aditya?'
+  description: 'STEMChests product design by Aditya Das.'
 }
 
 export default function Page() {
@@ -95,9 +95,7 @@ export default function Page() {
       </Gallery>
       <hr className='border-solid '></hr>
 
-      <p><span className='lf '>WEB: </span>Since STEMChests did not have nearly enough name recognition or platform to attract buyers online, I structured the website to primarily provide legitimacy for donors and potential partners, rather than a typical e-commerce website.</p>
-      <p> Since I was using a free Shopify web theme, I was severely limited in terms of web design and layout. However, through the color palette and text I was able to still have the final product synergize with the STEMChests branding.</p>
-      <p>You can find the current STEMChests website <Lnk href='https://www.stemchests.com/'>here</Lnk>.</p>
+      <p><span className='lf '>WEB: </span>Since STEMChests did not have nearly enough name recognition or platform to attract buyers online, I structured the website to primarily provide legitimacy for donors and potential partners, rather than function as an e-commerce website. Since I was using a free Shopify web theme, I was severely limited in terms of web design and layout. However, through the color palette and text, I was able to still have the final product synergize with the STEMChests branding. You can find the current STEMChests website <Lnk href='https://www.stemchests.com/'>here</Lnk>.</p>
 
       <hr className='border-solid'></hr>
       <p>A few months ago, a customer came up to me at a workshop event and told me that they remembered me selling them a science kit a year before and that she recognized us from the boxes. It made me proud that I had created branding unique enough to be remembered for over a year, at least by one person :)</p>

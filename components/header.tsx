@@ -28,6 +28,8 @@ function useScrollDirection() {
   return scrollDirection;
 };
 
+const possibleHover = <span className='hidden opacity-0 md:inline group-hover:opacity-100 text-primary-0 group-hover:text-yellow-400 transition-all duration-300 normal-case'>is a product designer based in New Haven, CT.</span>
+
 export default function Header() {
   const [expand, setExpand] = useState(true);
 
@@ -48,7 +50,7 @@ export default function Header() {
     ${scrollDirection === 'down' ? '-top-24' : 'top-0'} transition-all duration-500 `}>
 
           
-            <Link href='/' className='lf uppercase text-primary-0 hover:text-yellow-400 transition duration-300 '>Aditya Das ♡ </Link>
+            <Link href='/' className='group lf uppercase text-primary-0 hover:text-yellow-400 transition duration-300'>Aditya Das ♡</Link>
             
             
             <nav className='grow '>

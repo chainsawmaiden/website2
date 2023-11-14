@@ -41,8 +41,8 @@ const gallery6 = [collapsed2, stacked] as const;
 const gallery7 = [openingGif, closingGif] as const;
 
 export const metadata: Metadata = {
-  title: 'Popcorn - Aditya Das',
-  description: 'Popcorn* Magazine'
+  title: 'Popcorn* Mag - Aditya Das',
+  description: 'Popcorn* Magazine design by Aditya Das'
 }
 
 export default function Page() {

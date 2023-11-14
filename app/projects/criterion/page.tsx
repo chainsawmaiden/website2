@@ -27,8 +27,8 @@ const gallery3 = [palette] as const;
 const gallery4 = [proposal1, proposal2, proposal3, proposal4, proposal5, proposal6] as const;
 
 export const metadata: Metadata = {
-  title: 'Popcorn - Aditya Das',
-  description: 'Popcorn* Magazine'
+  title: 'Criterion Cinemas- Aditya Das',
+  description: 'Rebranding of Criterion Cinemas by Aditya Das.'
 }
 
 export default function Page() {
