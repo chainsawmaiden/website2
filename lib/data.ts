@@ -11,6 +11,7 @@ import criterionCinemas from "@/public/criterion-cinemas.gif"
 import dayHover from "@/public/day.png"
 
 import popcornExterior from "@/public/popcorn/exterior-front.png"
+import { StaticImageData } from "next/image";
 
 export const links = [
     {
@@ -30,8 +31,19 @@ export const links = [
     }
   ] as const;
 
-export const filters = ["design", "tech", "art"] as string[];
-export const categories = ["select", "bonus", "upcoming"] as string[];
+export const filters = ["design", "tech", "art"];
+export const categories = ["select", "bonus", "upcoming"];
+
+type projectType = {
+  title: string,
+  displayImage: StaticImageData,
+  hoverImage: StaticImageData,
+  page: string,
+  type: string[],
+  description: string,
+  category: string,
+  featured: boolean,
+}
 
 export const projectsData = [
     {
@@ -39,7 +51,7 @@ export const projectsData = [
       displayImage: stemchests,
       hoverImage: stemchests,
       page: "/projects/stemchests",
-      type: ["design"] as string[],
+      type: ["design"],
       description: ", product design, branding, identity, logo",
       category: "select",
       featured: true,
@@ -49,7 +61,7 @@ export const projectsData = [
       displayImage: popcornExterior,
       hoverImage: popcornExterior,
       page: "/projects/popcorn",
-      type: ["design"] as string[],
+      type: ["design"],
       description: ", product design, publication, graphic design",
       category: "select",
       featured: true,
@@ -59,7 +71,7 @@ export const projectsData = [
       displayImage: criterionCinemas,
       hoverImage: criterionCinemas,
       page: "/projects/criterion",
-      type: ["design"] as string[],
+      type: ["design"],
       description: ", identity, logo",
       category: "select",
       featured: true,
@@ -69,7 +81,7 @@ export const projectsData = [
       displayImage: roboticArm,
       hoverImage: roboticArm,
       page: "/projects/roboticarm",
-      type: ["tech"] as string[],
+      type: ["tech"],
       description: ", robotics, arduino, social robotics",
       category: "bonus",
       featured: false,
@@ -79,7 +91,7 @@ export const projectsData = [
       displayImage: allOfMeAllOfYou,
       hoverImage: allOfMeAllOfYou,
       page: "/projects/allofme",
-      type: ["art"] as string[],
+      type: ["art"],
       description: ", multimedia installation, traditional art, oil",
       category: "bonus",
       featured: false,
@@ -89,7 +101,7 @@ export const projectsData = [
       displayImage: council,
       hoverImage: council,
       page: "/projects/art",
-      type: ["art"] as string[],
+      type: ["art"],
       description: ", traditional art, digital art",
       category: "bonus",
       featured: true,
@@ -99,7 +111,7 @@ export const projectsData = [
       displayImage: hobbesAndSushiHover,
       hoverImage: hobbesAndSushiHover,
       page: "/projects/design",
-      type: ["design"] as string[],
+      type: ["design"],
       description: ", graphic design",
       category: "bonus",
       featured: true,
@@ -110,7 +122,7 @@ export const projectsData = [
       displayImage: questionMark,
       hoverImage: questionMark,
       page: "",
-      type: ["design", "tech"] as string[],
+      type: ["design", "tech"],
       description: ", web, software, ui/ux, identity (WIP)",
       category: "upcoming",
       featured: false,
@@ -120,7 +132,7 @@ export const projectsData = [
       displayImage: questionMark,
       hoverImage: dayHover,
       page: "",
-      type: ["design"] as string[],
+      type: ["design"],
       description: ", graphic design (WIP)",
       category: "upcoming",
       featured: false,
@@ -130,7 +142,7 @@ export const projectsData = [
       displayImage: questionMark,
       hoverImage: seventeenohone,
       page: "",
-      type: ["design"] as string[],
+      type: ["design"],
       description: ", creative direction, identity, graphic design (WIP)",
       category: "upcoming",
       featured: true,
@@ -140,9 +152,9 @@ export const projectsData = [
       displayImage: questionMark,
       hoverImage: questionMark,
       page: "",
-      type: ["tech"] as string[],
+      type: ["tech"],
       description: ", ai, software",
       category: "upcoming",
       featured: false,
     },
-  ] as const;
+  ] as projectType[];
