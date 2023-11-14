@@ -95,10 +95,9 @@ export default function Page() {
       </Gallery>
       <hr className='border-solid '></hr>
 
-      <p><span className='lf '>WEB: </span>Ironically, the website for our non-profit was an afterthought. It was a place for me to establish legitimacy for donors and potential partners, but I was not expecting a lot of actual buyers to discover our website out of the blue when we had little name recognition. Because of this, I structured the information to allow users to first learn about our organization and impact, then how to donate, and then lastly, how to purchase the kit and contact us.</p>
-      <p> Since I was using a free Shopify web theme, I was severely limited in terms of design as well (however, it eliminated the need to create a wireframe). With very little content to provide legitimacy when we first started off, I decided sketch out a potential layout that would then be populated as we ran more workshops and held more donation events. Despite the awkward constraints that prevented a fully united web design (including the external Donorbox site for donations), the website still maintains the playful STEMChests branding.</p>
+      <p><span className='lf '>WEB: </span>Since STEMChests did not have nearly enough name recognition or platform to attract buyers online, I structured the website to primarily provide legitimacy for donors and potential partners, rather than a typical e-commerce website.</p>
+      <p> Since I was using a free Shopify web theme, I was severely limited in terms of web design and layout. However, through the color palette and text I was able to still have the final product synergize with the STEMChests branding.</p>
       <p>You can find the current STEMChests website <Lnk href='https://www.stemchests.com/'>here</Lnk>.</p>
-
 
       <hr className='border-solid'></hr>
       <p>A few months ago, a customer came up to me at a workshop event and told me that they remembered me selling them a science kit a year before and that she recognized us from the boxes. It made me proud that I had created branding unique enough to be remembered for over a year, at least by one person :)</p>
