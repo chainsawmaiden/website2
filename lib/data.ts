@@ -2,24 +2,13 @@ import React from "react";
 
 import seventeenohone from "@/public/17o1-logo.png"
 import hobbesAndSushiHover from "@/public/hobbes-and-sushi-gif.gif"
-import mushroomForest from "@/public/mushroom-forest.jpg"
 import council from "@/public/council.png"
-import bac from "@/public/bac.gif"
-import bacHover from "@/public/bac-hover.gif"
 import allOfMeAllOfYou from "@/public/all-of-me-all-of-you.gif"
 import roboticArm from "@/public/robotic-arm.png"
 import questionMark from "@/public/questionmark.png"
 import stemchests from "@/public/stemchests.png"
-import sculptor from "@/public/sculptor.png"
 import criterionCinemas from "@/public/criterion-cinemas.gif"
-import blenderWorkhop from "@/public/blender-workshop.png"
 import dayHover from "@/public/day.png"
-import stockholmSyndrome from "@/public/stockholm-syndrome.png"
-import youngAndBeautiful from "@/public/young-and-beautiful.jpeg"
-import flowerBoy from "@/public/flower-boy.jpeg"
-import stemToTheSky from "@/public/stem-to-the-sky.gif"
-import stemToTheSkyDisplay from "@/public/stem-to-the-sky-display.png"
-import traditionalSized from "@/public/traditional-sized.gif"
 
 import popcornExterior from "@/public/popcorn/exterior-front.png"
 
@@ -69,7 +58,7 @@ export const projectsData = [
       title: "Criterion Cinemas Rebrand",
       displayImage: criterionCinemas,
       hoverImage: criterionCinemas,
-      page: "",
+      page: "/projects/criterion",
       type: ["design"] as string[],
       description: ", identity, logo",
       category: "select",

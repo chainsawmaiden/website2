@@ -41,8 +41,8 @@ const gallery6 = [collapsed2, stacked] as const;
 const gallery7 = [openingGif, closingGif] as const;
 
 export const metadata: Metadata = {
-  title: 'STEMChests - Aditya Das',
-  description: 'Who is Aditya?'
+  title: 'Popcorn - Aditya Das',
+  description: 'Popcorn* Magazine'
 }
 
 export default function Page() {
@@ -50,7 +50,7 @@ export default function Page() {
     
     <>
       
-      <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-2'>Project: Popcorn Magazine</h1>
+      <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-2'>Project: Popcorn* Magazine</h1>
       <ProjectOverview
         timeline='Oct 2023 - Nov 2023'
         team='Aditya Das (just me)'
@@ -58,7 +58,7 @@ export default function Page() {
         tools='Adobe Suite, Figma'
         skills='Publication, Graphic Design'>
         <>
-          <p className='w-full'><span className='lf '>OVERVIEW: </span>Student work for my ART 132: Introduction to Graphic Design class. The project was the second half of a rebranding assignment to create an informational magazine/brochure based off of a public space in New Haven, CT. I based mine off of the now-extinct Criterion Cinemas in New Haven. My goal was to revitalize the branding of an obsolete movie theater so that it could appeal to younger generations of movie-goers, many of which have found a newfound love for movies. Read a bit more in my <Lnk href='/projects/criterion'>Criterion Cinemas Rebranding</Lnk> write-up.</p>
+          <p className='w-full'><span className='lf '>OVERVIEW: </span>Student work for my ART 132: Introduction to Graphic Design class. The project was the second half of an assignment to rebrand a public space in New Haven, CT. I chose the now-extinct Criterion Cinemas in New Haven, an indie movie theater that was bought by Bow Tie Cinemas at the turn of the century, before eventually being shut down. My goal was to revitalize the branding of an obsolete movie theater so that it could appeal to younger generations of movie-goers, many of which have found a newfound love for movies. Read a bit more in my <Lnk href='/projects/criterion'>Criterion Cinemas Rebranding</Lnk> write-up.</p>
           <ul className='list-inside list-disc'>
             <li>How do I create a youthful magazine that reflects a "new beginning" for Criterion Cinemas?</li>
             <li>How do I create a unique publication layout that would still be accessible for readers?</li>

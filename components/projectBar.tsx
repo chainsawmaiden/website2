@@ -9,15 +9,6 @@ export default function ProjectBar({exclude} : {exclude? : number}) {
     const [isHovering, setIsHovering] = useState(false as boolean);
     const [hoverContent, setHoverContent] = useState([] as any[]);
 
-    function handleMouseOver({title, hoverImage, page, description}: {title: string, hoverImage: object, page: string, description: string}) {
-        setIsHovering(true);
-        setHoverContent([title, hoverImage, page!="", description]);
-    }
-
-    function handleMouseOut() {
-        setIsHovering(false);
-    }
-
     return (
         <>
             <section className='grid grid-flow-col auto-cols-auto sm:grid-flow-row sm:auto-rows-auto pt-2 px-0.5 gap-y-2'>
@@ -41,8 +32,6 @@ export default function ProjectBar({exclude} : {exclude? : number}) {
             project.category != "upcoming" && index != exclude && (project.page != "" ? 
 
             <Link key={index} className={`group flex transition duration-500 h-auto w-full break-inside-avoid rounded-sm flex-col hover:z-0 hover:scale-[1.03] -mt-1 `}
-                onMouseOver= {() => handleMouseOver(project)}
-                onMouseOut={handleMouseOut}
                 href={project.page}
                 target={project.page[0] == "/" ? "_self" : "_blank"}>
 
@@ -52,9 +41,7 @@ export default function ProjectBar({exclude} : {exclude? : number}) {
             
             : 
 
-            <div key={index} className={`group cursor-help flex transition duration-500 h-auto w-full break-inside-avoid rounded-sm flex-col hover:z-0 hover:scale-[1.03] -mt-1 `}
-                onMouseOver= {() => handleMouseOver(project)}
-                onMouseOut={handleMouseOut}>
+            <div key={index} className={`group cursor-help flex transition duration-500 h-auto w-full break-inside-avoid rounded-sm flex-col hover:z-0 hover:scale-[1.03] -mt-1 `}>
 
                 {content}
                                         
