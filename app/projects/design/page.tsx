@@ -45,7 +45,7 @@ export default function Page() {
       </section>
 
       <hr className='border-solid '></hr>
-      <Lnk href='/'>All Projects →</Lnk>
+      <Lnk href='/projects/stemchests'>Next Project →</Lnk>
       <hr className='border-solid '></hr>
       
     </>

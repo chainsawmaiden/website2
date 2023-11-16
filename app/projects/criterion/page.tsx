@@ -85,7 +85,7 @@ export default function Page() {
       </Gallery>
 
       <hr className='border-solid '></hr>
-      <Lnk href='/'>All Projects →</Lnk>
+      <Lnk href='/projects/roboticarm'>Next Project →</Lnk>
       <hr className='border-solid '></hr>
       
     </>

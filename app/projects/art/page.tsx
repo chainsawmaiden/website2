@@ -37,7 +37,7 @@ export default function Page() {
       </div>
 
       <hr className='border-solid '></hr>
-      <Lnk href='/'>All Projects →</Lnk>
+      <Lnk href='/projects/design'>Next Project →</Lnk>
       <hr className='border-solid '></hr>
       
     </>

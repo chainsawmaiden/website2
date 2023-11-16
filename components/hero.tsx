@@ -119,14 +119,17 @@ export default function Hero() {
 
                         {projectsData.map((project, index) => {
 
+                            const contentImage = <Image 
+                                    src={project.displayImage}
+                                    alt="project image"
+                                    className={boxView ? 'p-[7.5%] aspect-square object-contain w-auto transition duration-300' : 'sm:group-hover:opacity-50 object-contain w-min transition duration-300 max-w-[2rem] sm:max-w-[3rem] max-h-5 mt-1 sm:mt-0 sm:mr-1.5 sm:max-h-10'}
+                                />
+
+
                             const contentGrid = <>
                                 <p className='text-primary-300 text-[.5rem] font-normal font-abcdiatype mt-1 sm:mt-0.5 transition duration-300 w-4'>{`[${index+1 < 10 ? '0' : ''}${(index+1)}]`}</p>
 
-                                <Image 
-                                    src={project.displayImage}
-                                    alt="project image"
-                                    className='p-[7.5%] aspect-square object-contain w-auto transition duration-300'
-                                />
+                                {contentImage}
                                                 
                                 <p className='text-primary-100 mr-1.5 uppercase lf sm:mr-3 [overflow-wrap: break-word] transition duration-300'>{project.title}<span className='pf lowercase'>{project.description}</span></p>
                             </>
@@ -136,11 +139,7 @@ export default function Hero() {
 
                                 <p className={`group-hover:text-yellow-400 text-primary-100 whitespace-nowrap mr-1.5 sm:mr-3 sm:mt-2 transition duration-300 ${true ? `font-abcfavorit text-2xl sm:text-5xlfavorit italic*` : `text-5xl uppercase font-times`}`}>{project.title}</p>
 
-                                <Image 
-                                    src={project.displayImage}
-                                    alt="project image"
-                                    className={`sm:group-hover:opacity-50 object-contain w-min transition duration-300 max-w-[2rem] sm:max-w-[3rem] max-h-5 mt-1 sm:mt-0 sm:mr-1.5 sm:max-h-10`}
-                                />
+                                {contentImage}
                             </div>
 
                             const content = boxView ? <>{contentGrid}</> : <>
