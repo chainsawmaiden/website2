@@ -27,12 +27,12 @@ const page = [
 
   ] as React.ReactNode[];
 
-  export default function Page() {
-    return (
-      page.map((element, id) => 
-        <>
-          {element}
-          <hr className='border-solid' />
-        </>)
-    )
-  }
+export default function Page() {
+  return (
+    page.map((element, id) => 
+      <React.Fragment key={id}>
+        {element}
+        <hr className='border-solid' />
+      </React.Fragment>)
+  )
+}
