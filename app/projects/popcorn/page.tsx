@@ -45,102 +45,102 @@ export const metadata: Metadata = {
   description: 'Popcorn* Magazine design by Aditya Das'
 }
 
+const page = [
+  <ProjectOverview
+    title='Project: Popcorn* Magazine'
+    tagline='Designing a youthful magazine in three dimensions.'
+    timeline='Oct 2023 - Nov 2023'
+    team='Aditya Das (just me)'
+    role='Designer'
+    tools='Adobe Suite, Figma'
+    skills='Publication, Graphic Design'>
+    <>
+      <p><span className='lf '>OVERVIEW: </span>Student work for my ART 132: Introduction to Graphic Design class. The project was the second half of an assignment to rebrand a public space in New Haven, CT. I chose the now-extinct Criterion Cinemas in New Haven, an indie movie theater that was bought by Bow Tie Cinemas at the turn of the century, before eventually being shut down. My goal was to revitalize the branding of an obsolete movie theater so that it could appeal to younger generations of movie-goers, many of which have found a newfound love for movies. Read a bit more in my <Lnk href='/projects/criterion'>Criterion Cinemas Rebranding</Lnk> write-up.</p>
+      <ul className='list-inside list-disc'>
+        <li>How do I create a youthful magazine that reflects a "new beginning" for Criterion Cinemas?</li>
+        <li>How do I create a unique publication layout that would still be accessible for readers?</li>
+      </ul>
+      <p>The final product is a magazine presented in a "popcorn box" format that people can unfold to read!</p>
+    </>
+  </ProjectOverview>,
+
+  <Gallery cols='sm:grid-cols-2' caption='Complete spreads, unfolded, of the magazine.'>
+    {gallery0.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+  </Gallery>,
+
+  <h4 className='bt text-2xl text-primary-200'>Younger audiences want products that feel youthful, expressive, and fun.</h4>,
+
+  <p><span className='lf '>THE IDEA: </span>When brainstorming different layouts for this project, I found that many youthful magazines have a very "gimmicky" quality to them. One of the best successful examples of a gimmicky cover creating an unmistakable magazine "brand" is <Lnk href='https://www.theguardian.com/theobserver/2001/mar/25/features.magazine37'>i-D Magazine</Lnk>, which matches the youthful quality I wanted to acheive with my magazine.</p>,
+
+  <Gallery cols='sm:grid-cols-4' caption='Some of my personal favorite i-D covers.'>
+    {idgallery.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[20rem]'/>)}
+  </Gallery>,
+
+  <>
+  <p>After finding enough inspiration, I began coming up with ideas for a "gimmick" for my own magazine. The one that seemed the most promising (and most ambitious)? A popcorn box!</p>
+  <p>This idea resonated with me for 3 reasons:</p>
+  <ol className='list-inside list-decimal'>
+    <li>It's instantly recognizable. What other magazine is presented as a three-dimensional popcorn box?</li>
+    <li>It straddles the boundary between modern and retro that us Gen-Z kids love best. The red and white popcorn box is an icon reminiscent "golden age of cinema", but very few theaters still serve popcorn in these kind of boxes (if you don't believe me, go to your local Regal or AMC).</li>
+    <li>When unfolded, it creates a large spread that almost looks like an arc. This drives home the magazine's goal to "break the mold": it doesn't give into a standard rectangular layout, but rather folds into something more promising!</li>
+  </ol>
+
+  <p className='italic w-full'>So how does this magazine work?</p>
+  </>,
+
+  <Gallery cols='sm:grid-cols-2'>
+    {gallery1.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+  </Gallery>,
+
+  <p>When first presented, the magazine will be shaped as a popcorn box! The exteriors are all screencaps from <span className='italic'>Moonrise Kingdom</span>. A sticker of a popcorn image (with a repeated caption of "eat me") holds the magazine together. The sticker can only be peeled off once, the same way popcorn can only be eaten once, fitting into theme.</p>,
+
+  <Gallery cols='sm:grid-cols-2'>
+    {gallery2.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+  </Gallery>,
+
+  <h4 className='bt text-2xl text-primary-200'>The use of a sticker guides new users on how to best unfold the magazine.</h4>,
+
+  <p>To take off the sticker and open the magazine, the magazine has to be collapsed in order to open the flap. The orientation is made clear by the screencaps, which piece together to create one full shot on the magazine. The "info" text then hints at the reader to rotate the magazine 90 degrees to open.</p>,
+
+  <Gallery cols='sm:grid-cols-2'>
+    {gallery3.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+  </Gallery>,
+
+  <p>As the reader begins to unfold the magazine, they are faced with their first layout, which showcases the major feature film of the week (for this "volume", it was <span className='italic'>Moonrise Kingdom</span>). They are also greeted with all of the movies screening that week along with times of each screening.</p>,
+
+  <Gallery cols='sm:grid-cols-1' caption="Why these specific movies? They're all ones that my friends and I watched within our first month of coming to Yale.">
+    {gallery4.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+  </Gallery>,
+
+  <h4 className='bt text-2xl text-primary-200'>Ironing out the heirarchy was critical in making sure that the very maximalist information was still easy to process at a glance, while still inviting a closer look.</h4>,
+
+  <p>When the reader finishes opening up the full magazine, they are greeted with a massive spread of all of the movies. There is very little emphasis on actual small text, as I wanted the screencaps to do most of the "advertising" and entice the reader to visit the theater to watch them. </p>,
+
+  <Gallery cols='sm:grid-cols-1' caption='My favorite thing about Letterboxd reviews is that they are usually extremely short and make no meaningful critiques of the movie itself, but are still funny enough to convince me to watch them.'>
+    {gallery5.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+  </Gallery>,
+
+  <p>Overlaid on top of these movies are Letterboxd (a site/app beloved by the younger movie-watching crowds) reviews of each movie. From personal experience, most Gen-Z students watch movies through word of mouth or online reviews, and so I wanted to reflect that within the spread! Adding these reviews allowed me to create subtle visual barriers between each "movie section" while also adding more humor to the magazine.</p>,
+
+  <Gallery cols='sm:grid-cols-2' caption='What kind of reader are you?'>
+    {gallery6.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[35rem]'/>)}
+  </Gallery>,
+
+  <p>The magazine can be folded in on itself to become easily portable. Or, if you're a collector and want to keep multiple editions of the magazine, you can stack the unopened magazines on top of each other!</p>,
+
+  <Gallery cols='sm:grid-cols-2' caption='Some badly recorded GIFs of me playing around with the magazine.'>
+    {gallery7.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-screen'/>)}
+  </Gallery>,
+
+  <Lnk href='/projects/criterion'>Next Project →</Lnk>
+] as React.ReactNode[]
+
 export default function Page() {
   return (
-    
-    <>
-      
-      <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-2'>Project: Popcorn* Magazine</h1>
-      <ProjectOverview
-        timeline='Oct 2023 - Nov 2023'
-        team='Aditya Das (just me)'
-        role='Designer'
-        tools='Adobe Suite, Figma'
-        skills='Publication, Graphic Design'>
-        <>
-          <p className='w-full'><span className='lf '>OVERVIEW: </span>Student work for my ART 132: Introduction to Graphic Design class. The project was the second half of an assignment to rebrand a public space in New Haven, CT. I chose the now-extinct Criterion Cinemas in New Haven, an indie movie theater that was bought by Bow Tie Cinemas at the turn of the century, before eventually being shut down. My goal was to revitalize the branding of an obsolete movie theater so that it could appeal to younger generations of movie-goers, many of which have found a newfound love for movies. Read a bit more in my <Lnk href='/projects/criterion'>Criterion Cinemas Rebranding</Lnk> write-up.</p>
-          <ul className='list-inside list-disc'>
-            <li>How do I create a youthful magazine that reflects a "new beginning" for Criterion Cinemas?</li>
-            <li>How do I create a unique publication layout that would still be accessible for readers?</li>
-          </ul>
-          <p className='w-full'>The final product is a magazine presented in a "popcorn box" format that people can unfold to read!</p>
-        </>
-      </ProjectOverview>
-
-      <Gallery cols='sm:grid-cols-2' caption='Complete spreads, unfolded, of the magazine.'>
-        {gallery0.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
-      </Gallery>
-      <hr className='border-solid '></hr>
-
-      <p className='w-full'><span className='lf '>THE IDEA: </span>When brainstorming different layouts for this project, I found that many youthful magazines have a very "gimmicky" quality to them. One of the best successful examples of a gimmicky cover creating an unmistakable magazine "brand" is <Lnk href='https://www.theguardian.com/theobserver/2001/mar/25/features.magazine37'>i-D Magazine</Lnk>, which matches the youthful quality I wanted to acheive with my magazine.</p>
-
-      
-      <Gallery cols='sm:grid-cols-4' caption='Some of my personal favorite i-D covers.'>
-        {idgallery.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[20rem]'/>)}
-      </Gallery>
-      <hr className='border-solid '></hr>
-      
-      <p className='w-full'>After finding enough inspiration, I began coming up with ideas for a "gimmick" for my own magazine. The one that seemed the most promising (and most ambitious)? A popcorn box!</p>
-      <p className='w-full'>This idea resonated with me for 3 reasons:</p>
-      <ol className='list-inside list-decimal'>
-        <li>It's instantly recognizable. What other magazine is presented as a three-dimensional popcorn box?</li>
-        <li>It straddles the boundary between modern and retro that us Gen-Z kids love best. The red and white popcorn box is an icon reminiscent "golden age of cinema", but very few theaters still serve popcorn in these kind of boxes (if you don't believe me, go to your local Regal or AMC).</li>
-        <li>When unfolded, it creates a large spread that almost looks like an arc. This drives home the magazine's goal to "break the mold": it doesn't give into a standard rectangular layout, but rather folds into something more promising!</li>
-      </ol>
-
-      <p className='italic w-full'>So how does this magazine work?</p>
-
-      <Gallery cols='sm:grid-cols-2'>
-        {gallery1.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
-      </Gallery>
-      <hr className='border-solid '></hr>
-      
-      <p className='w-full'>When first presented, the magazine will be shaped as a popcorn box! The exteriors are all screencaps from <span className='italic'>Moonrise Kingdom</span>. A sticker of a popcorn image (with a repeated caption of "eat me") holds the magazine together. The sticker can only be peeled off once, the same way popcorn can only be eaten once, fitting into theme.</p>
-
-      <Gallery cols='sm:grid-cols-2'>
-        {gallery2.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
-      </Gallery>
-      <hr className='border-solid '></hr>
-      
-      <p className='w-full'>To take off the sticker and open the magazine, the magazine has to be collapsed in order to open the flap. The orientation is made clear by the screencaps, which piece together to create one full shot on the magazine. The "info" text then hints at the reader to rotate the magazine 90 degrees to open.</p>
-
-      <Gallery cols='sm:grid-cols-2'>
-        {gallery3.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
-      </Gallery>
-      <hr className='border-solid '></hr>
-      
-      <p className='w-full'>As the reader begins to unfold the magazine, they are faced with their first layout, which showcases the major feature film of the week (for this "volume", it was <span className='italic'>Moonrise Kingdom</span>). They are also greeted with all of the movies screening that week along with times of each screening.</p>
-
-      <Gallery cols='sm:grid-cols-1' caption="Why these specific movies? They're all ones that my friends and I watched within our first month of coming to Yale.">
-        {gallery4.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
-      </Gallery>
-      <hr className='border-solid '></hr>
-      
-      <p className='w-full'>When the reader finishes opening up the full magazine, they are greeted with a massive spread of all of the movies. There is very little emphasis on actual small text, as I wanted the screencaps to do most of the "advertising" and entice the reader to visit the theater to watch them. </p>
-
-      <Gallery cols='sm:grid-cols-1' caption='My favorite thing about Letterboxd reviews is that they are usually extremely short and make no meaningful critiques of the movie itself, but are still funny enough to convince me to watch them.'>
-        {gallery5.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
-      </Gallery>
-      <hr className='border-solid '></hr>
-      
-      <p>Overlaid on top of these movies are Letterboxd (a site/app beloved by the younger movie-watching crowds) reviews of each movie. From personal experience, most Gen-Z students watch movies through word of mouth or online reviews, and so I wanted to reflect that within the spread! Adding these reviews allowed me to create subtle visual barriers between each "movie section" while also adding more humor to the magazine.</p>
-
-      <Gallery cols='sm:grid-cols-2' caption='What kind of reader are you?'>
-        {gallery6.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[35rem]'/>)}
-      </Gallery>
-      <hr className='border-solid '></hr>
-      
-      <p>The magazine can be folded in on itself to become easily portable. Or, if you're a collector and want to keep multiple editions of the magazine, you can stack the unopened magazines on top of each other!</p>
-
-      <Gallery cols='sm:grid-cols-2' caption='Some badly recorded GIFs of me playing around with the magazine.'>
-        {gallery7.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-screen'/>)}
-      </Gallery>
-
-
-      <hr className='border-solid '></hr>
-      <Lnk href='/projects/criterion'>Next Project →</Lnk>
-      <hr className='border-solid '></hr>
-      
-    </>
+    page.map((element, id) => 
+      <>
+        {element}
+        <hr className='border-solid' />
+      </>)
   )
 }

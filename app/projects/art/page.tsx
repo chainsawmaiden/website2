@@ -22,24 +22,26 @@ import youngAndBeautiful from '@/public/art/young-and-beautiful.jpeg'
 
 const gallery0 = [council, youngAndBeautiful, mushroomForest, newReligion, sculptor, flowerBoy, youngAndBeautiful, entangled,] as const;
 
+const page = [
+  <>
+    <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-2'>Art Portfolio</h1>
+    <p>A selection of award-winning paintings, drawings, and illustrations I have made in the past years. Enjoy!</p>
+  </>,
+
+  <div className='columns-1 sm:columns-2 md:columns-3 gap-x-2'>
+    {gallery0.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='mb-2'/>)}
+  </div>,
+
+  <Lnk href='/projects/design'>Next Project →</Lnk>,
+
+  ] as React.ReactNode[];
+
 export default function Page() {
   return (
-    
-    <>
-      
-      <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-2'>Art Portfolio</h1>
-      <p className='w-full'>A selection of award-winning paintings, drawings, and illustrations I have made in the past years. Enjoy!</p>
-
-      <hr className='border-solid'></hr>
-
-      <div className='columns-1 sm:columns-2 md:columns-3 gap-x-2'>
-        {gallery0.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='mb-2'/>)}
-      </div>
-
-      <hr className='border-solid '></hr>
-      <Lnk href='/projects/design'>Next Project →</Lnk>
-      <hr className='border-solid '></hr>
-      
-    </>
+    page.map((element, id) => 
+      <>
+        {element}
+        <hr className='border-solid' />
+      </>)
   )
 }
