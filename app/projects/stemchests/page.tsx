@@ -76,7 +76,7 @@ export default function Page() {
 
       <Break />
 
-      <Accent>I needed packaging for the box to cost less than $1. The lower the cost, the better.</Accent>
+      <Accent>We needed packaging for the box to cost less than $1. The lower the cost, the better.</Accent>
   
       <Break />
 
