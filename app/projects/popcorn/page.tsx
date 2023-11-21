@@ -30,6 +30,7 @@ import review1 from '@/public/popcorn/review-1.png'
 import review2 from '@/public/popcorn/review-2.png'
 import review3 from '@/public/popcorn/review-3.png'
 import Break from '@/components/break'
+import Accent from '@/components/accent'
 
 const gallery0 = [layout1, layout2] as const;
 const idgallery = [id1, id2, id3, id4] as const;
@@ -75,7 +76,7 @@ export default function Page() {
 
       <Break />
 
-      <h4 className='bt text-2xl text-primary-200'>Younger audiences want products that feel youthful, expressive, and fun.</h4>
+      <Accent>Younger audiences want products that feel youthful, expressive, and fun.</Accent>
 
       <Break />
 
@@ -116,7 +117,7 @@ export default function Page() {
 
       <Break />
 
-      <h4 className='bt text-2xl text-primary-200'>The use of a sticker guides new users on how to best unfold the magazine.</h4>
+      <Accent>The use of a sticker guides new users on how to best unfold the magazine.</Accent>
 
       <Break />
 
@@ -140,7 +141,7 @@ export default function Page() {
 
       <Break />
 
-      <h4 className='bt text-2xl text-primary-200'>Ironing out the heirarchy was critical in making sure that the very maximalist information was still easy to process at a glance, while still inviting a closer look.</h4>
+      <Accent>Ironing out the heirarchy was critical in making sure that the very maximalist information was still easy to process at a glance, while still inviting a closer look.</Accent>
 
       <Break />
 

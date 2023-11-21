@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Accent from './accent';
     
 type Props = {
   children: React.ReactNode, 
@@ -15,9 +16,9 @@ type Props = {
 export default function ProjectOverview({children, title, tagline, timeline, team, role, tools, skills}: Props) {
   return (
     <>
-      <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-2'>{title}</h1>
-      <h4 className='bt text-2xl text-primary-200 -my-1'>{tagline}</h4>
-      <hr className='border-solid'></hr>
+      <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-3'>{title}</h1>
+      <Accent>{tagline}</Accent>
+      <hr className='border-solid -mt-1'></hr>
       <section className='grid grid-cols-1 sm:grid-cols-[3fr_1fr] gap-x-10 gap-y-2'>
         <div className='flex flex-col gap-y-2'>
             {children}

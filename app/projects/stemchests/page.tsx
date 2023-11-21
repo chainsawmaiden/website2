@@ -39,6 +39,7 @@ const gallery4 = [stemchestsWireframe, stemchestsWeb] as const;
 import Gallery from '@/components/gallery'
 import ProjectOverview from '@/components/projectOverview'
 import Break from '@/components/break'
+import Accent from '@/components/accent'
 
 export const metadata: Metadata = {
   title: 'STEMChests - Aditya Das',
@@ -75,7 +76,7 @@ export default function Page() {
 
       <Break />
 
-      <h4 className='bt text-2xl text-primary-200'>I needed packaging for the box to cost less than $1. The lower the cost, the better.</h4>
+      <Accent>I needed packaging for the box to cost less than $1. The lower the cost, the better.</Accent>
   
       <Break />
 
@@ -100,7 +101,7 @@ export default function Page() {
 
       <Break />
 
-      <h4 className='bt text-2xl text-primary-200'>We needed children from ages 5-10 to understand the kits with little to no help from adults.</h4>
+      <Accent>We needed children from ages 5-10 to understand the kits with little to no help from adults.</Accent>
 
       <Break />
 
@@ -118,7 +119,7 @@ export default function Page() {
 
       <Break />
 
-      <h4 className='bt text-2xl text-primary-200'>A few months ago, a customer came up to me at a workshop event and told me that they remembered me selling them a science kit a year before and that she recognized us from the boxes. It made me proud that I had created branding unique enough to be remembered for over a year, at least by one person :)</h4>
+      <Accent>A few months ago, a customer came up to me at a workshop event and told me that they remembered me selling them a science kit a year before and that she recognized us from the boxes. It made me proud that I had created branding unique enough to be remembered for over a year, at least by one person :)</Accent>
 
       <Break />
 
