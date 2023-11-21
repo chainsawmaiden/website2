@@ -28,10 +28,13 @@ const page = [
 
 export default function Page() {
   return (
-    page.map((element, id) => 
-      <React.Fragment key={id}>
-        {element}
-        <hr className='border-solid' />
-      </React.Fragment>)
+    <>
+      {page.map((element, id) => 
+        <React.Fragment key={id}>
+          {element}
+          <hr className='border-solid' />
+        </React.Fragment>)
+      }
+    </>
   )
 }
