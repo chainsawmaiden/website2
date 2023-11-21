@@ -17,38 +17,37 @@ import popcorn from '@/public/design/layout-2.png'
 import criterion from '@/public/design/criterion-1.png'
 import bac from '@/public/design/bac-hover.gif'
 import popcorn2 from '@/public/design/exterior-front.png'
+import Break from '@/components/break'
 
 const gallery0 = [hobbesAndSushi, popcorn2] as const;
 const gallery1 = [blenderWorkshop, criterion, bac] as const;
 const gallery2 = [popcorn] as const;
 
-const page = [
-  <>
-    <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-2'>Misc. Design</h1>
-    <p>Some random posters, posts, and other things that I've made. Enjoy!</p>
-  </>,
-
-  <section className='grid grid-cols-1 sm:grid-cols-3 gap-x-2 rounded-md'>
-    <div className='flex flex-col gap-y-2'>
-      {gallery0.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh=''/>)}
-    </div>
-    <div className='flex flex-col gap-y-2'>
-      {gallery1.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh=''/>)}
-    </div>
-    <div className='flex flex-col gap-y-2'>
-      {gallery2.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh=''/>)}
-    </div>
-  </section>,
-  
-  <Lnk href='/projects/stemchests'>Next Project →</Lnk>,
-  ] as const;
-
 export default function Page() {
   return (
-    page.map((element, id) => 
-      <React.Fragment key={id}>
-        {element}
-        <hr className='border-solid' />
-      </React.Fragment>)
+    <>
+      <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-2'>Misc. Design</h1>
+      <p>Some random posters, posts, and other things that I've made. Enjoy!</p>
+
+      <Break />
+
+      <section className='grid grid-cols-1 sm:grid-cols-3 gap-x-2 rounded-md'>
+        <div className='flex flex-col gap-y-2'>
+          {gallery0.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh=''/>)}
+        </div>
+        <div className='flex flex-col gap-y-2'>
+          {gallery1.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh=''/>)}
+        </div>
+        <div className='flex flex-col gap-y-2'>
+          {gallery2.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh=''/>)}
+        </div>
+      </section>
+
+      <Break />
+
+      <Lnk href='/projects/stemchests'>Next Project →</Lnk>
+
+      <Break />
+    </>
   )
 }
