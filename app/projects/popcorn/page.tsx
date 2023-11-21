@@ -133,7 +133,7 @@ const page = [
   </Gallery>,
 
   <Lnk href='/projects/criterion'>Next Project →</Lnk>
-] as React.ReactNode[]
+] as const;
 
 export default function Page() {
   return (

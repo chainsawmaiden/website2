@@ -25,7 +25,7 @@ const page = [
   
   <Lnk href='/projects/art'>Next Project →</Lnk>,
 
-  ] as React.ReactNode[];
+  ] as const;
 
 export default function Page() {
   return (

@@ -41,7 +41,7 @@ const page = [
   </section>,
   
   <Lnk href='/projects/stemchests'>Next Project →</Lnk>,
-  ] as React.ReactNode[];
+  ] as const;
 
 export default function Page() {
   return (

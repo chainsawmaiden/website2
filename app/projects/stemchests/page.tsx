@@ -97,7 +97,7 @@ const page = [
   <p>A few months ago, a customer came up to me at a workshop event and told me that they remembered me selling them a science kit a year before and that she recognized us from the boxes. It made me proud that I had created branding unique enough to be remembered for over a year, at least by one person :)</p>,
   
   <Lnk href='/projects/popcorn'>Next Project →</Lnk>,
-  ] as React.ReactNode[];
+  ] as const;
 
 export default function Page() {
   return (
