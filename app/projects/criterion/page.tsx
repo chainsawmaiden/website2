@@ -46,7 +46,7 @@ export default function Page() {
         <>
           <p><span className='lf '>OVERVIEW: </span>Student work for my ART 132: Introduction to Graphic Design class. The project was the first half of an assignment to rebrand a public space in New Haven, CT. I chose the now-extinct Criterion Cinemas in New Haven, an indie movie theater that was bought by Bow Tie Cinemas at the turn of the century, before eventually being shut down. My goal was to revitalize the branding of an obsolete movie theater so that it could appeal to younger generations of movie-goers, many of which have found a newfound love for movies.</p>
           <ul className='list-inside list-disc'>
-            <li>How do I create a logo that appeals to younger audiences while maintaining an indie movie theater?</li>
+            <li>How do I create a logo that appeals to younger audiences while maintaining the essence of a historical indie movie theater?</li>
           </ul>
           <p>This project culminated in me choosing a logo, color palette, and a new typeface for Criterion Cinemas.</p>
         </>
@@ -80,7 +80,7 @@ export default function Page() {
 
       <Break />
 
-      <p><span className='lf '>TYPEFACE: </span>Helvetica Neue felt like the perfect font to represent this new theater. It's a font that is tied with a lot of rich history and was at its peak in the 20th century, reflecting the historical significance of Criterion Cinemas while still being a sleek and modern font.</p>
+      <p><span className='lf '>TYPEFACE: </span>Helvetica Neue felt like the perfect font to represent this new theater. It's a font that is associated with a lot of rich history while still appearing sleek and modern, reflecting the historical significance of Criterion Cinemas without it appearing like it's stuck in the past.</p>
 
       <Break />
 
@@ -90,7 +90,7 @@ export default function Page() {
 
       <Break />
 
-      <p><span className='lf '>PALETTE: </span>Inspired by Polaroid and Sony, I opted to have a mainly black-and-white color palette with accents of color as needed. Considering that most promotional material for the theater would typically have screencaps of movies, the vibrant colors from that material could easily do most of the talking.</p>,
+      <p><span className='lf '>PALETTE: </span>Inspired by Polaroid and Sony, I opted to have a mainly black-and-white color palette with accents of color as needed. Considering that most promotional material for the theater would typically have screencaps of movies, the vibrant colors from that material could easily do most of the talking.</p>
 
       <Break />
 

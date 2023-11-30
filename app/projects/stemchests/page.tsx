@@ -86,7 +86,7 @@ export default function Page() {
       <Break />
 
       <Gallery cols='sm:grid-cols-3' caption='Our logo in action!'>
-        {gallery2.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+        {gallery2.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[20rem]'/>)}
       </Gallery>
 
       <Break />
