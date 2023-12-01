@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Accent from './accent';
+import Image from 'next/image';
     
 type Props = {
   children: React.ReactNode, 
@@ -11,15 +12,19 @@ type Props = {
   team: string, 
   role: string, 
   tools: string, 
-  skills: string};
+  skills: string,
+  img?: any};
 
-export default function ProjectOverview({children, title, tagline, timeline, team, role, tools, skills}: Props) {
+export default function ProjectOverview({children, title, tagline, timeline, team, role, tools, skills, img}: Props) {
   return (
     <>
+      {img && <Image src={img} alt='project image' className='rounded-md h-auto w-full mb-2'/>}
       <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-3'>{title}</h1>
       <Accent>{tagline}</Accent>
-      <hr className='border-solid -mt-1'></hr>
+      
+
       <section className='grid grid-cols-1 sm:grid-cols-[3fr_1fr] gap-x-10 gap-y-2'>
+        <hr className='border-solid -mt-1 col-span-full'></hr>
         <div className='flex flex-col gap-y-2'>
             {children}
         </div>

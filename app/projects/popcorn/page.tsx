@@ -20,6 +20,7 @@ import layout1 from '@/public/popcorn/layout-1.png'
 import layout2 from '@/public/popcorn/layout-2.png'
 import closingGif from '@/public/popcorn/closing-gif.gif'
 
+import moonriseMagazine from '@/public/popcorn/exterior-with-moonrise.png'
 
 import id1 from '@/public/id-1.jpg'
 import id2 from '@/public/id-2.jpg'
@@ -31,7 +32,9 @@ import review2 from '@/public/popcorn/review-2.png'
 import review3 from '@/public/popcorn/review-3.png'
 import Break from '@/components/break'
 import Accent from '@/components/accent'
+import Image from 'next/image'
 
+const firstSpread = [moonriseMagazine] as const;
 const gallery0 = [layout1, layout2] as const;
 const idgallery = [id1, id2, id3, id4] as const;
 const gallery1 = [exteriorFront, exteriorBack] as const;
@@ -70,8 +73,8 @@ export default function Page() {
 
       <Break />
 
-      <Gallery cols='sm:grid-cols-2' caption='Complete spreads, unfolded, of the magazine.'>
-        {gallery0.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+      <Gallery cols='sm:grid-cols-1'>
+        {firstSpread.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
       </Gallery>
 
       <Break />
@@ -135,7 +138,7 @@ export default function Page() {
 
       <Break />
 
-      <Gallery cols='sm:grid-cols-1' caption="Why these specific movies? They're all ones that my friends and I watched within our first month of coming to Yale.">
+      <Gallery cols='sm:grid-cols-1 ' caption="Why these specific movies? They're all ones that my friends and I watched within our first month of coming to Yale.">
         {gallery4.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
       </Gallery>
 
