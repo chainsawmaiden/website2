@@ -2,7 +2,9 @@
 
 import React from 'react'
 import Accent from './accent';
-import Image from 'next/image';
+import ImageModal from './imageModal';
+import Break from './break';
+
     
 type Props = {
   children: React.ReactNode, 
@@ -13,18 +15,27 @@ type Props = {
   role: string, 
   tools: string, 
   skills: string,
-  img?: any};
+  img?: any,
+  cover?: boolean,};
 
-export default function ProjectOverview({children, title, tagline, timeline, team, role, tools, skills, img}: Props) {
+export default function ProjectOverview({children, title, tagline, timeline, team, role, tools, skills, img, cover}: Props) {
   return (
     <>
-      {img && <Image src={img} alt='project image' className='rounded-md h-auto w-full mb-2'/>}
+      {img && 
+        <>
+          <div className={`rounded-md w-full max-h-[80vh] ${!cover && 'flex flex-row justify-center bg-primary-0 xl:py-4'}`}>
+            <ImageModal src={img} rounded={true} maxh={`${cover ? 'object-cover h-full w-full' : 'h-full w-auto'} `}/>
+            
+          </div>
+          <hr className='border-none -mt-2' />
+          <Break />
+        </>
+      }
       <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-3'>{title}</h1>
       <Accent>{tagline}</Accent>
-      
+      <Break />
 
       <section className='grid grid-cols-1 sm:grid-cols-[3fr_1fr] gap-x-10 gap-y-2'>
-        <hr className='border-solid -mt-1 col-span-full'></hr>
         <div className='flex flex-col gap-y-2'>
             {children}
         </div>

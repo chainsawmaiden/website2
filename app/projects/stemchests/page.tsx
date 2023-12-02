@@ -27,19 +27,22 @@ import instr13 from '@/public/stemchests-instruction/13.png'
 import instr14 from '@/public/stemchests-instruction/14.png'
 import instr15 from '@/public/stemchests-instruction/15.png'
 
+import stemchestsHeader from '@/public/stemchests-header.png'
 
 import stemchestsWireframe from '@/public/stemchests-wireframe.png'
 import stemchestsWeb from '@/public/stemchests-web-1.png'
 
-const gallery1 = [stemchests, stemchestsReviews] as const;
+const gallery1 = [stemchests] as const;
 const gallery2 = [stemchestsLogo, stemchestsCart, stemchestsWorkshop] as const;
 const gallery3 = [instr1, instr2, instr3, instr4, instr5, instr5, instr6, instr7, instr8, instr9, instr10, instr11, instr12, instr13, instr14, instr15] as const;
 const gallery4 = [stemchestsWireframe, stemchestsWeb] as const;
+const gallery5 = [stemchestsHeader] as const;
 
 import Gallery from '@/components/gallery'
 import ProjectOverview from '@/components/projectOverview'
 import Break from '@/components/break'
 import Accent from '@/components/accent'
+import ImageWithText from '@/components/imageWithText'
 
 export const metadata: Metadata = {
   title: 'STEMChests - Aditya Das',
@@ -70,8 +73,8 @@ export default function Page() {
 
       <Break />
 
-      <Gallery cols='sm:grid-cols-2'>
-        {gallery1.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+      <Gallery cols='sm:grid-cols-1'>
+        {gallery1.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[80vh]'/>)}
       </Gallery>
 
       <Break />
@@ -79,9 +82,13 @@ export default function Page() {
       <Accent>We needed packaging for the box to cost less than $1. The lower the cost, the better.</Accent>
   
       <Break />
-
       <p><span className='lf '>THE BOX: </span>The biggest two constraints for designing the boxes were an extremely tight budget constraint (we wanted our product to cost less than $5 total for both the box itself and the parts inside, meaning that the box and any decorations would have to cost less than $1) and the need for us to make every single product by hand (a.k.a. no factories). With both of these extreme constraints, I opted for a simple (and cheap) design that emphasized the handmade quality of the boxes. Taking inspiration from Amazon's effective packaging and the unintentional green-brown color harmony between our STEMChests logo logo and the box, I was able to create an easily recognizable product exterior that cost only $.43!</p>
-      <p>After this, I gave 25 "test boxes" to families from various different backgrounds and asked them to provide feedback for the kit, which helped me assess user pain points and helped me make some finishing touches to the instruction booklets and product to make it more accessible!</p>
+      <Break />
+
+      <ImageWithText img={stemchestsReviews}>
+        
+        <p>After this, I gave 25 "test boxes" to families from various different backgrounds and asked them to provide feedback for the kit, which helped me assess user pain points and helped me make some finishing touches to the instruction booklets and product to make it more accessible.</p>
+      </ImageWithText>
 
       <Break />
 
@@ -119,7 +126,13 @@ export default function Page() {
 
       <Break />
 
-      <Accent>A few months ago, a customer came up to me at a workshop event and told me that they remembered me selling them a science kit a year before and that she recognized us from the boxes. It made me proud that I had created branding unique enough to be remembered for over a year, at least by one person :)</Accent>
+      <Gallery cols='sm:grid-cols-1'>
+        {gallery5.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+      </Gallery>
+
+      <Break />
+
+      <p>A few months ago, a customer came up to me at a workshop event and told me that they remembered me selling them a science kit a year before and that she recognized us from the boxes. It made me proud that I had created branding unique enough to be remembered for over a year, at least by one person :)</p>
 
       <Break />
 

@@ -20,7 +20,7 @@ import layout1 from '@/public/popcorn/layout-1.png'
 import layout2 from '@/public/popcorn/layout-2.png'
 import closingGif from '@/public/popcorn/closing-gif.gif'
 
-import moonriseMagazine from '@/public/popcorn/exterior-with-moonrise.png'
+import moonriseMagazine from '@/public/popcorn/title-card.png'
 
 import id1 from '@/public/id-1.jpg'
 import id2 from '@/public/id-2.jpg'
@@ -53,6 +53,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+
+      
+      
       <ProjectOverview
         title='Project: Popcorn* Magazine'
         tagline='Designing a youthful magazine in three dimensions.'
@@ -73,8 +76,8 @@ export default function Page() {
 
       <Break />
 
-      <Gallery cols='sm:grid-cols-1'>
-        {firstSpread.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+      <Gallery cols='sm:grid-cols-2'>
+        {gallery0.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
       </Gallery>
 
       <Break />
@@ -94,6 +97,15 @@ export default function Page() {
       <Break />
 
       <p>After finding enough inspiration, I began coming up with ideas for a "gimmick" for my own magazine. The one that seemed the most promising (and most ambitious)? A popcorn box!</p>
+      
+      <Break />
+
+      <Gallery cols='sm:grid-cols-1' caption='Introducing Popcorn* Magazine.'>
+        {firstSpread.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
+      </Gallery>
+
+      <Break />
+      
       <p>This idea resonated with me for 3 reasons:</p>
       <ol className='list-inside list-decimal'>
         <li>It's instantly recognizable. What other magazine is presented as a three-dimensional popcorn box?</li>
