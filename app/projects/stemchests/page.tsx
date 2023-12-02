@@ -34,7 +34,7 @@ import stemchestsWeb from '@/public/stemchests-web-1.png'
 
 const gallery1 = [stemchests] as const;
 const gallery2 = [stemchestsLogo, stemchestsCart, stemchestsWorkshop] as const;
-const gallery3 = [instr1, instr2, instr3, instr4, instr5, instr5, instr6, instr7, instr8, instr9, instr10, instr11, instr12, instr13, instr14, instr15] as const;
+const gallery3 = [instr1, instr2, instr3, instr4, instr5, instr6, instr7, instr8, instr9, instr10, instr11, instr12, instr13, instr14, instr15] as const;
 const gallery4 = [stemchestsWireframe, stemchestsWeb] as const;
 const gallery5 = [stemchestsHeader] as const;
 
@@ -102,7 +102,7 @@ export default function Page() {
 
       <Break />
 
-      <Gallery cols='sm:grid-cols-2 lg:grid-cols-4' caption='The instruction booklet for the "Balloon Car" project.'>
+      <Gallery cols='sm:grid-cols-3 lg:grid-cols-5' caption='The instruction booklet for the "Balloon Car" project.'>
         {gallery3.map((img, i) => <ImageModal key={i} src={img} />)}
       </Gallery>
 
