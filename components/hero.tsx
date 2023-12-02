@@ -71,7 +71,7 @@ export default function Hero() {
     }
 
     function Filters() {
-        return (<section className={`flex lowercase justify-between px-5 md:px-20 pf min-w-min sm:items-start `}>
+        return (<section className={`flex lowercase justify-between pf min-w-min sm:items-start `}>
             <p 
                 onClick={() => handleClickAll()}
                 className={`underline* cursor-pointer ${myFilters.includes('all') ? 'text-primary-100 hover:text-yellow-500' : 'text-yellow-600 hover:text-yellow-700'} whitespace-nowrap justify-self-center transition duration-300 ease-in'`}
@@ -105,7 +105,7 @@ export default function Hero() {
         // 4. sooooo bad so bad so bad but yeah thats basically what it does and then theres some other super jank stuff
 
         <>
-            <section className={`block w-screen z-10 mt-1 -ml-5 md:-ml-20 sticky ${scrollDirection === 'down' ? '-top-[3.75rem] md:-top-12' : ' top-9 md:top-12'} transition-all duration-500`}>
+            <section className={`block w-full z-10 mt-1 px-0 sticky ${scrollDirection === 'down' ? '-top-[3.75rem] md:-top-12' : ' top-9 md:top-12'} transition-all duration-500`}>
                 <Filters />
             </section>
             <section className={`flex flex-col h-auto pt-2 sm:pt-4 -mx-8 px-8 gap-y-3 ${boxView ? 'pb-2' : 'pb-6'}`}>
@@ -121,7 +121,7 @@ export default function Hero() {
 
                             const contentImage = <Image 
                                     src={project.displayImage}
-                                    sizes="25vw"
+                                    sizes="6vw, 25vw"
                                     alt="project image"
                                     className={boxView ? 'p-[7.5%] aspect-square object-contain w-auto transition duration-300' : 'sm:group-hover:opacity-50 object-contain w-min transition duration-300 max-w-[2rem] sm:max-w-[3rem] max-h-5 mt-1 sm:mt-0 sm:mr-1.5 sm:max-h-10'}
                                 />
