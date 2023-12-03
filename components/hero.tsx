@@ -121,7 +121,7 @@ export default function Hero() {
 
                             const contentImage = <Image 
                                     src={project.displayImage}
-                                    sizes="6vw, 25vw"
+                                    sizes="25vw"
                                     alt="project image"
                                     className={boxView ? 'p-[7.5%] aspect-square object-contain w-auto transition duration-300' : 'sm:group-hover:opacity-50 object-contain w-min transition duration-300 max-w-[2rem] sm:max-w-[3rem] max-h-5 mt-1 sm:mt-0 sm:mr-1.5 sm:max-h-10'}
                                 />
