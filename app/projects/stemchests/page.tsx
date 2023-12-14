@@ -53,8 +53,7 @@ import Break from '@/components/break'
 import Accent from '@/components/accent'
 import ImageWithTextRight from '@/components/imageWithTextRight'
 import MiniTitle from '@/components/miniTitle'
-import SectionTitle from '@/components/sectionTitle'
-import Image from 'next/image'
+import SubsectionTitle from '@/components/sectionTitle'
 import IconBox from '@/components/iconBox'
 import IconSection from '@/components/iconSection'
 
@@ -75,7 +74,7 @@ export default function Page() {
         tools='Adobe Suite, Procreate, Shopify/Sanity'
         skills='Product Design, Branding, Identity, UX/UI'>
         <>
-          <p><span className='lf '>OVERVIEW: </span>Branding and product design I made for my non-profit, <Lnk href='https://www.stemchests.com/' >STEMChests</Lnk>. The non-profit model revolved around selling affordable, low-cost science kits and using all profits to donate more kits to students in underprivileged communities. In the course of a year, we managed to go from zero name recognition or customer base to over $3,600 crowdfunded online/in-person and over 1000 kits distributed. We currently have an in-person conversion rate of 37%.</p>
+          <p><span className='bf '>OVERVIEW: </span>Branding and product design I made for my non-profit, <Lnk href='https://www.stemchests.com/' >STEMChests</Lnk>. The non-profit model revolved around selling affordable, low-cost science kits and using all profits to donate more kits to students in underprivileged communities. In the course of a year, we managed to go from zero name recognition or customer base to over $3,600 crowdfunded online/in-person and over 1000 kits distributed. We currently have an in-person conversion rate of 37%.</p>
           <ul className='list-inside list-disc'>
             <li>How do I create a trusted brand that can earn both sales and donations?</li>
             <li>How do I create a recognizable and appealing physical product that can be easily handmade on a low budget?</li>
@@ -94,7 +93,7 @@ export default function Page() {
       <Break />
 
       <MiniTitle>01: USERS</MiniTitle>
-      <SectionTitle>Understanding Our Consumers</SectionTitle>
+      <SubsectionTitle>Understanding Our Consumers</SubsectionTitle>
       <p>In order to streamline our branding and our product, I considered the target buyers/donors. Buyers would typically be middle-aged parents that are trying to find ways to help their child engage with STEM through interactive projects. For this buyer, the charitable cause is icing on the cake, while the low-cost and appealing brand are the main selling points ($10 for a science kit? And the profits go to charity? Of course!). They would typically buy these kits <span className='italic'>in-person.</span> </p>
       
       <p>Donors would typically be teachers or parents that are passionate/involved with community service and care about equitable education. After conducting more and more workshop sessions, they typically would also be people who had kids that were too old to use the kits themselves. They would typically donate <span className='italic'>online.</span>, which meant that I would need to tailor a website for that specific use.</p>
@@ -106,7 +105,7 @@ export default function Page() {
       <Break />
 
       <MiniTitle>02: PACKAGING</MiniTitle>
-      <SectionTitle>Designing The Box</SectionTitle>
+      <SubsectionTitle>Designing The Box</SubsectionTitle>
       <p>So, how do we design a box to appeal to children and parents alike?</p>
 
       <Gallery cols='sm:grid-cols-1'>
@@ -136,7 +135,7 @@ export default function Page() {
 
       <Break />
       <MiniTitle>03: Logo Design</MiniTitle>
-      <SectionTitle>Logo & Branding</SectionTitle>
+      <SubsectionTitle>Logo & Branding</SubsectionTitle>
 
       <p>STEMChests started from nothing, and my goal was to create a brand that would be instantly trustworthy. Since we were a team high school students who carefully assembled each kit by hand, I decided to give our products a more "hand-made", less corporate feel. I incorporated various illustrations, vibrant colors, and playful (yet legible) fonts to represent our non-profit.</p>
 
@@ -147,7 +146,7 @@ export default function Page() {
       <Break />
       
       <MiniTitle>04: USER EXPERIENCE AND INTERFACE</MiniTitle>
-      <SectionTitle>The Website</SectionTitle>
+      <SubsectionTitle>The Website</SubsectionTitle>
 
       <p>Since STEMChests did not have nearly enough name recognition or platform to attract buyers online, I structured the website to primarily provide legitimacy for donors and potential partners, rather than function as an e-commerce website. Since I was using a free Shopify web theme, I was severely limited in terms of web design and layout. However, through the color palette and text, I was able to still have the final product synergize with the STEMChests branding. You can find the current STEMChests website <Lnk href='https://www.stemchests.com/'>here</Lnk>.</p>
 
@@ -158,9 +157,9 @@ export default function Page() {
       <Break />
 
       <MiniTitle>05: TAKEAWAYS</MiniTitle>
-      <SectionTitle>What I Learned</SectionTitle>
+      <SubsectionTitle>What I Learned</SubsectionTitle>
 
-      <IconSection cols='lg:grid-cols-3 gap-6'>
+      <IconSection cols='lg:grid-cols-3'>
         <IconBox title='Balancing Viewpoints' icon={iconDesignNib}>
           <p>After receiving feedback from (quite literally) hundreds of people, I realized that many people's feedback would conflict. This project taught me how to take in and balance reviews from students, parents, and teachers alike, and try to reach a solution that made the most amount of people happy.</p>
         </IconBox>

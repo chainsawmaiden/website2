@@ -45,6 +45,12 @@
 }
 
 @layer base {
+  .subf {
+    @apply font-abcfavorit text-lgfavorit tracking-normal leading-6 font-normal
+  }
+}
+
+@layer base {
   .la {
     @apply font-arial text-[.96rem] tracking-normal leading-5 font-normal;
   }
