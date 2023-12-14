@@ -163,13 +163,11 @@ export default function Page() {
 
       <MiniTitle>07: FINAL TOUCHPOINTS</MiniTitle>
 
+      <p>The magazine can be folded in on itself to become easily portable. Or, if you're a collector and want to keep multiple editions of the magazine, you can stack the unopened magazines on top of each other!</p>
+
       <Gallery cols='sm:grid-cols-2' caption='What kind of reader are you?'>
         {gallery6.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[35rem]'/>)}
       </Gallery>
-
-      <p>The magazine can be folded in on itself to become easily portable. Or, if you're a collector and want to keep multiple editions of the magazine, you can stack the unopened magazines on top of each other!</p>
-
-      <Break />
 
       <Gallery cols='sm:grid-cols-2' caption='Some badly recorded GIFs of me playing around with the magazine.'>
         {gallery7.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-screen'/>)}
