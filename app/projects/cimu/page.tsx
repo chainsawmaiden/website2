@@ -40,6 +40,8 @@ import accountVerifiedPopup from '@/public/cimu/account-verified-popup.gif'
 import loginPhone from '@/public/cimu/login-phone.gif'
 import loginPassword from '@/public/cimu/login-password.gif'
 import finalMockups from '@/public/cimu/final-mockups.png'
+import gregsTailor from '@/public/cimu/gregs-tailor.png'
+import picadillyTailor from '@/public/cimu/picadilly-tailor.png'
 
 import hours1 from '@/public/cimu/hours-fail-1.gif'
 import hours2 from '@/public/cimu/hours-fail-2.gif'
@@ -75,6 +77,7 @@ import { StaticImageData } from 'next/image'
 
 const gallery0 = [twoPhoneDisplay] as const;
 const gallery1 = [accountLofi, passwordLofi] as const;
+const tailorGallery = [gregsTailor, picadillyTailor] as const;
 
 type subCaption = {img: StaticImageData, caption: string,}
 const gallery2 = [
@@ -206,6 +209,12 @@ export default function Page() {
         <Break />
 
         <MiniTitle>02: UNDERSTANDING TAILORS</MiniTitle>
+
+        <Gallery cols='sm:grid-cols-2' caption='Tailor shops in the New Haven area.'>
+            {tailorGallery.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[40rem]'/>)}
+        </Gallery>
+
+        
         <SectionTitle>Tailor Demographics</SectionTitle>
         <p>After being brought onto this project, I did a deep dive into tailor demographics to understand how to best customize our app to fit their needs. I also stopped by a couple local tailor shops to meet local tailors to gather qualitative data about their shops and how they worked. Here are the major findings:</p>
 
