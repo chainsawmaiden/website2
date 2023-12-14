@@ -4,7 +4,7 @@ import React from 'react'
 export default function ProjectsLayout({
     children,
   }: {
-    children: React.ReactNode
+    children: React.ReactNode,
   }) {
     return (
         <SidebarLayout>

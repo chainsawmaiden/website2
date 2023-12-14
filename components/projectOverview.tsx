@@ -31,16 +31,17 @@ export default function ProjectOverview({children, title, tagline, timeline, tea
           <Break />
         </>
       }
-      <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-3'>{title}</h1>
-      <Accent>{tagline}</Accent>
-      <Break />
 
       <section className='grid grid-cols-1 sm:grid-cols-[3fr_1fr] gap-x-10 gap-y-2'>
+      
         <div className='flex flex-col gap-y-2'>
+          <h1 className='font-abcfavorit text-5xlfavorit leading-[1.15] w-full -mb-3'>{title}</h1>
+          <Accent>{tagline}</Accent>
+          <Break />
             {children}
         </div>
         <hr className='block sm:hidden border-solid'></hr>
-        <div className='flex flex-col gap-y-2'>
+        <div className='flex flex-col gap-y-2 self-end'>
           <p className='w-full'><span className='lf'>TIMELINE: </span>{timeline}</p>
           <hr className='border-solid'></hr>
           <p className='w-full'><span className='lf'>TEAM: </span>{team}</p>

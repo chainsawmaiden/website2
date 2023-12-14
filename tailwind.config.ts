@@ -31,14 +31,15 @@ const config: Config = {
           200: "#6A6E73",
           300: '#75777B',
           400: '#929598',
-          600: '#B6B9BA',
+          600: '#B0B3B6',
           700: '#CDCECF',
           800: '#DFDDDE',
+          900: '#f0f0f0',
 
         },
 
         'secondary': {
-          0: '#FFFFFF',
+          0: '#ffffff',
         },
 
         'yellow': {

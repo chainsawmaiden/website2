@@ -8,7 +8,8 @@ import roboticArm from "@/public/robotic-arm.png"
 import questionMark from "@/public/questionmark.png"
 import stemchests from "@/public/stemchests.png"
 import criterionCinemas from "@/public/criterion-cinemas.gif"
-import dayHover from "@/public/day.png"
+import cimuHover from "@/public/cimu/welcome-schedule-hovering-mockup.png"
+import cimuDisplay from "@/public/cimu/welcome-schedule-hovering-mockup-cropped.png"
 
 import popcornExterior from "@/public/popcorn/exterior-front.png"
 import { StaticImageData } from "next/image";
@@ -46,6 +47,16 @@ type projectType = {
 }
 
 export const projectsData = [
+    {
+      title: "Cimu Onboarding",
+      displayImage: cimuHover,
+      hoverImage: cimuHover,
+      page: "/projects/cimu",
+      type: ["design", "tech"],
+      description: ", product design, ui/ux, case study",
+      category: "select",
+      featured: false,
+    },
     {
       title: "STEMChests",
       displayImage: stemchests,
@@ -124,16 +135,6 @@ export const projectsData = [
       page: "",
       type: ["design", "tech"],
       description: ", ui/ux, case study, fullstack, identity (WIP)",
-      category: "upcoming",
-      featured: false,
-    },
-    {
-      title: "Cimu Onboarding",
-      displayImage: questionMark,
-      hoverImage: dayHover,
-      page: "",
-      type: ["design"],
-      description: ", ui/ux, case study (WIP)",
       category: "upcoming",
       featured: false,
     },

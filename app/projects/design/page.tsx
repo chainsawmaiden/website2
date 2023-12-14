@@ -45,7 +45,7 @@ export default function Page() {
 
       <Break />
 
-      <Lnk href='/projects/stemchests'>Next Project →</Lnk>
+      <Lnk href='/projects/cimu'>Next Project →</Lnk>
 
       <Break />
     </>
