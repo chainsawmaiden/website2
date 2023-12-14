@@ -66,7 +66,7 @@ export default function Page() {
   return (
     <>
       <ProjectOverview
-        title='Project: STEMChests'
+        title='Mini Case Study: STEMChests'
         tagline='Creating accessible science kits for elementary schoolers.'
         timeline='Feb 2022 - Aug 2023'
         team='Aditya Das (just me)'
@@ -116,13 +116,17 @@ export default function Page() {
   
       <p>The biggest two constraints for designing the boxes were an extremely tight budget constraint (we wanted our product to cost less than $5 total for both the box itself and the parts inside, meaning that the box and any decorations would have to cost less than $1) and the need for us to make every single product by hand (a.k.a. no factories). With both of these extreme constraints, I opted for a simple (and cheap) design that emphasized the handmade quality of the boxes. Taking inspiration from Amazon's effective packaging and the unintentional green-brown color harmony between our STEMChests logo logo and the box, I was able to create an easily recognizable product exterior that cost only $.43!</p>
 
+      <SubsectionTitle separate>Instruction Booklets</SubsectionTitle>
+
+      <p>We also strived to make our kits accessible to all students regardless of background or age. We wanted young students to be able to use the kits on their own, which led to a <span className='italic'> lot</span> of consulting with elementary school science teachers, toy store owners, and families to create a product and brand that would be appealing and understandable by children. Overall, this resulted in big font sizes, detailed and clear illustrations, and very easy-to-follow instructions. This took a lot of revision, consulting with teachers and toy makers, and testing with families to get right.</p>
+
       <Gallery cols='sm:grid-cols-3 lg:grid-cols-5' caption='The instruction booklet for the "Balloon Car" project.'>
         {gallery3.map((img, i) => <ImageModal key={i} src={img} />)}
       </Gallery>
 
       <Accent>We needed children from ages 5-10 to understand the kits with little to no help from adults.</Accent>
 
-      <p>We also strived to make our kits accessible to all students regardless of background or age. We wanted young students to be able to use the kits on their own, which led to a <span className='italic'> lot</span> of consulting with elementary school science teachers, toy store owners, and families to create a product and brand that would be appealing and understandable by children. Overall, this resulted in big font sizes, detailed and clear illustrations, and very easy-to-follow instructions. This took a lot of revision, consulting with teachers and toy makers, and testing with families to get right.</p>
+      
 
       <Break />
 

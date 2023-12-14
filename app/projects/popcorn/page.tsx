@@ -141,7 +141,7 @@ export default function Page() {
 
       <p>As the reader begins to unfold the magazine, they are faced with their first layout, which showcases the major feature film of the week (for this "volume", it was <span className='italic'>Moonrise Kingdom</span>) alongside the list of all movies screening in the theater that week.</p>
       
-      <p>I wanted the advertisement of attending the cinema to be subtle, since younger audiences are very good at picking up and dismissing blatant advertisements. However, to open the magazine, users are forced to interact and acknowledge the page with the screenings. Overall, it not only becomes a cool graphic element, but one that quietly offers a call to action to the reader.</p>
+      {false && <p>I wanted the advertisement of attending the cinema to be subtle, since younger audiences are very good at picking up and dismissing blatant advertisements. However, to open the magazine, users are forced to interact and acknowledge the page with the screenings. Overall, it not only becomes a cool graphic element, but one that quietly offers a call to action to the reader.</p>}
 
       <Break />
 

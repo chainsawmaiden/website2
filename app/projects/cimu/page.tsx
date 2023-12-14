@@ -42,6 +42,7 @@ import loginPassword from '@/public/cimu/login-password.gif'
 import finalMockups from '@/public/cimu/final-mockups.png'
 import gregsTailor from '@/public/cimu/gregs-tailor.png'
 import picadillyTailor from '@/public/cimu/picadilly-tailor.png'
+import editShop from '@/public/cimu/edit-shop.gif'
 
 import hours1 from '@/public/cimu/hours-fail-1.gif'
 import hours2 from '@/public/cimu/hours-fail-2.gif'
@@ -161,6 +162,7 @@ export default function Page() {
             <MiniTitle>STEP 01</MiniTitle>
             <SubsectionTitle>Create Account</SubsectionTitle>
             <p>Short and sweet, to reduce the chances of a user getting overwhelmed and closing the app before even creating their account.</p>
+            <p>A sliding pop-up serves as a transition point from account creation to the account verification steps that users will have to follow.</p>
         </ImageWithTextRight>
 
         <ImageWithTextRight img={registerShopNew} outline>
@@ -191,17 +193,17 @@ export default function Page() {
             <p>Finally, users can schedule a meeting for a Cimu representative to verify them in-person.</p>
         </ImageWithTextRight>
 
-        <ImageWithTextRight img={scheduleMeeting} outline>
+        <ImageWithTextRight img={editShop} outline>
             <MiniTitle>ASIDE: EDITING INFORMATION</MiniTitle>
             <p>It’s also easy for users to quickly edit their information, in case they realized they entered something incorrectly.</p>
         </ImageWithTextRight>
 
+        <MiniTitle>QUICK AND SIMPLE VERIFICATION</MiniTitle>
+        <p>After Cimu verifies the user during the meeting, they will get a notification that their account is verified and they’re ready to start receiving appointments from customers.</p>
+
         <Gallery cols='sm:grid-cols-1 '>
             <ImageModal src={accountVerifiedPopup} rounded={true} maxh='max-h-[85vh]' outline/>
         </Gallery>
-
-        <MiniTitle>QUICK AND SIMPLE VERIFICATION</MiniTitle>
-        <p>After Cimu verifies the user during the meeting, they will get a notification that their account is verified and they’re ready to start receiving appointments from customers.</p>
 
         <ImageWithTextLeft img={loginPhone} outline>
             <MiniTitle>ASIDE: LOGGING IN</MiniTitle>
@@ -291,11 +293,12 @@ export default function Page() {
             <p>Moreover, buttons are fully rounded to separate them from other components (unless it severely impacts space, such as in the “Date” component).</p>
         </ImageWithTextRight>
 
+        <SubsectionTitle>Margins</SubsectionTitle>
+        <p>Margins were relatively standard, with a 12-px spacing between most components, except for select interactions where it was necessary to include more/less spacing. This would allow elements to be easily clickable, especially for older audiences that may struggle with tapping the screen accurately.</p>
+
         <Gallery cols='sm:grid-cols-1'>
             <ImageModal src={margins} rounded={true} maxh='max-h-[85vh]' outline/>
         </Gallery>
-        <SubsectionTitle>Margins</SubsectionTitle>
-        <p>Margins were relatively standard, with a 12-px spacing between most components, except for select interactions where it was necessary to include more/less spacing. This would allow elements to be easily clickable, especially for older audiences that may struggle with tapping the screen accurately.</p>
 
         <Break />
 
@@ -319,7 +322,7 @@ export default function Page() {
 
         <p>This way, I reduce the chance of users not even creating an account in the first place. And once a user has an account created, they’re more incentivized to take the steps to verify it. It’s a win-win!</p>
 
-        <SubsectionTitle>Designing for Scalability</SubsectionTitle>
+        <SubsectionTitle separate>Designing for Scalability</SubsectionTitle>
         <p>Having a very modular account setup process allows Cimu to add in new verification methods or additional steps to the login process as they see fit without having to overhaul the entire account creation process. While I was designing primarily for an MVP, I wanted to make sure that as their app expanded, new features would be easy to integrate into the current system.</p>
 
         <Break />
@@ -390,7 +393,7 @@ export default function Page() {
             <ImageModal src={finalMockups} rounded={true} maxh=''/>
         </Gallery>
 
-        <p>By the end of job, I had created over 150 different low- and hi-fi frames, as well as the prototypes shown in the beginning of this case study.</p>
+        <p>By the end of job, I had created over 150 different low- and hi-fi frames, built a design system, and organized the prototypes shown in the beginning of this case study.</p>
 
         <Break />
         <MiniTitle>09: TAKEAWAYS</MiniTitle>
