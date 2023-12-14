@@ -153,7 +153,7 @@ export default function Page() {
         
         <SectionTitle separate={true}>Account Creation</SectionTitle>
 
-        <p>Ultimately, I split the onboarding process into a 5 steps.</p>
+        <p>Ultimately, I split the process into 5 steps:</p>
 
         <ImageWithTextRight img={createAccount}>
             <MiniTitle>STEP 01</MiniTitle>
