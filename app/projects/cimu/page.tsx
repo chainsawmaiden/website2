@@ -343,7 +343,7 @@ export default function Page() {
         <p>During preliminary testing, I found that users often believed that the account creation process was going to be a much longer process than what it actually ended up being. I opted to include the progress bar to help show users that the sign-up process was only three steps long, incentivizing them to make an account.</p>
 
         <Break />
-        <MiniTitle>07: CHALLENGES</MiniTitle>
+        <MiniTitle>07: Iterative Design Challenges</MiniTitle>
         <SectionTitle>Simplifying Interfaces</SectionTitle>
         <p>Considering that I was designing for older, LEP users, I spent a lot of time on distilling the user interface into its simplest form. Below are some of the more interesting challenges that I faced while designing for Cimu.</p>
 
