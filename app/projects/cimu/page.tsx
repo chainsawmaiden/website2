@@ -124,6 +124,8 @@ export default function Page() {
             {gallery0.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[85vh]'/>)}
         </Gallery>
 
+        <Break />
+
         <MiniTitle>01: Summary</MiniTitle>
         <SectionTitle>A Journey Through Cimu</SectionTitle>
 
@@ -280,7 +282,7 @@ export default function Page() {
             <p>However, many colors had poor contrast or were simply too saturated and strained the eyes. I altered the colors accordingly to fix those issues.</p>
         </ImageWithTextRight>
         <ImageWithTextLeft img={fonts} outline>
-            <SubsectionTitle>Cimu Fonts</SubsectionTitle>
+            <SubsectionTitle>Fonts</SubsectionTitle>
             <p>Cimu had two fonts: Halogen and Avenir. However, Halogen was too wide and unreadable for us to implement in any meaningful way, so we decided not to include it.</p>
         </ImageWithTextLeft>
         <ImageWithTextRight img={components} outline>
@@ -316,6 +318,9 @@ export default function Page() {
         </IconSection>
 
         <p>This way, I reduce the chance of users not even creating an account in the first place. And once a user has an account created, they’re more incentivized to take the steps to verify it. It’s a win-win!</p>
+
+        <SubsectionTitle>Designing for Scalability</SubsectionTitle>
+        <p>Having a very modular account setup process allows Cimu to add in new verification methods or additional steps to the login process as they see fit without having to overhaul the entire account creation process. While I was designing primarily for an MVP, I wanted to make sure that as their app expanded, new features would be easy to integrate into the current system.</p>
 
         <Break />
         <MiniTitle>06: VISUAL DESIGN</MiniTitle>
@@ -404,6 +409,13 @@ export default function Page() {
             </IconBox>
             
         </IconSection>
+
+        <Break />
+
+        <MiniTitle>10: Future</MiniTitle>
+        <SectionTitle>Next Steps</SectionTitle>
+
+        <p>I would want to test this app on a larger scale with more tailors, especially a fully developed version. With only a few interviews to truly go off of, this project felt a little bit like I was designing in a void. Being able to truly see how many different people interact with the system I designed would not only verify that the process worked, but would allow me to continue improving the app.</p>
 
         <Break />
 
