@@ -33,7 +33,8 @@ const config: Config = {
           400: '#929598',
           600: '#B0B3B6',
           700: '#CDCECF',
-          800: '#DFDDDE',
+          800: '#DDDEDF',
+          850: '#E6E6E7',
           900: '#f0f0f0',
 
         },

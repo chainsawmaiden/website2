@@ -128,7 +128,7 @@ export default function Page() {
         <SectionTitle>A Journey Through Cimu</SectionTitle>
 
         <Gallery cols='sm:grid-cols-1 '>
-            <ImageModal src={loadingAnimation} rounded={true} maxh='max-h-[85vh]'/>
+            <ImageModal src={loadingAnimation} rounded={true} maxh='max-h-[85vh]' outline/>
         </Gallery>
 
         <p>Cimu connects shoppers to tailors so that they can get their clothes easily altered to fit, instead of having to return them. Here’s how that process works:</p>
@@ -155,52 +155,58 @@ export default function Page() {
 
         <p>Ultimately, I split the process into 5 steps:</p>
 
-        <ImageWithTextRight img={createAccount}>
+        <ImageWithTextRight img={createAccount} outline>
             <MiniTitle>STEP 01</MiniTitle>
             <SubsectionTitle>Create Account</SubsectionTitle>
             <p>Short and sweet, to reduce the chances of a user getting overwhelmed and closing the app before even creating their account.</p>
         </ImageWithTextRight>
-        <ImageWithTextRight img={registerShopNew}>
+
+        <ImageWithTextRight img={registerShopNew} outline>
             <MiniTitle>STEP 02</MiniTitle>
             <SubsectionTitle>Register Shop</SubsectionTitle>
             <p>If users don’t have a shop, they can enter in the address and name from scratch.</p>
         </ImageWithTextRight>
-        <ImageWithTextRight img={registerShopOld}>
+
+        <ImageWithTextRight img={registerShopOld} outline>
             <p>Or, if their shop is already present in the Cimu system, they can just confirm the information and move on.</p>
         </ImageWithTextRight>
-        <ImageWithTextRight img={hoursFinal}>
+
+        <ImageWithTextRight img={hoursFinal} outline>
             <MiniTitle>STEP 03</MiniTitle>
             <SubsectionTitle>Setting a Schedule</SubsectionTitle>
             <p>Tailors set their weekly availabilities.</p>
         </ImageWithTextRight>
-        <ImageWithTextRight img={chooseSpecialties}>
+
+        <ImageWithTextRight img={chooseSpecialties} outline>
             <MiniTitle>STEP 04</MiniTitle>
             <SubsectionTitle>Choosing Specialties</SubsectionTitle>
             <p>This helps make sure that Cimu creates optimal customer-tailor pairings.</p>
         </ImageWithTextRight>
-        <ImageWithTextRight img={scheduleMeeting}>
+
+        <ImageWithTextRight img={scheduleMeeting} outline>
             <MiniTitle>STEP 05</MiniTitle>
             <SubsectionTitle>Schedule Verification Meeting</SubsectionTitle>
             <p>Finally, users can schedule a meeting for a Cimu representative to verify them in-person.</p>
         </ImageWithTextRight>
-        <ImageWithTextRight img={scheduleMeeting}>
+
+        <ImageWithTextRight img={scheduleMeeting} outline>
             <MiniTitle>ASIDE: EDITING INFORMATION</MiniTitle>
             <p>It’s also easy for users to quickly edit their information, in case they realized they entered something incorrectly.</p>
         </ImageWithTextRight>
 
         <Gallery cols='sm:grid-cols-1 '>
-            <ImageModal src={accountVerifiedPopup} rounded={true} maxh='max-h-[85vh]'/>
+            <ImageModal src={accountVerifiedPopup} rounded={true} maxh='max-h-[85vh]' outline/>
         </Gallery>
 
         <MiniTitle>QUICK AND SIMPLE VERIFICATION</MiniTitle>
         <p>After Cimu verifies the user during the meeting, they will get a notification that their account is verified and they’re ready to start receiving appointments from customers.</p>
 
-        <ImageWithTextLeft img={loginPhone}>
+        <ImageWithTextLeft img={loginPhone} outline>
             <MiniTitle>ASIDE: LOGGING IN</MiniTitle>
             <SubsectionTitle>Automatic Redirection</SubsectionTitle>
             <p>If a user already has an account, Cimu will automatically redirect them to the log in page.</p>
         </ImageWithTextLeft>
-        <ImageWithTextLeft img={loginPassword}>
+        <ImageWithTextLeft img={loginPassword} outline>
             <p>Users can also choose to login with their password if they desire.</p>
         </ImageWithTextLeft>
 
@@ -236,8 +242,8 @@ export default function Page() {
 
         <p>First, I ran some audits of onboarding processes on various apps: either ones that had a significant portion of older users, or ones that were structured similarly to Cimu.</p>
 
-        <Gallery cols='sm:grid-cols-1 ' caption='I also audited various social media platforms, such as Facebook and WhatsApp.'>
-            <ImageModal src={appAudit} rounded={true} maxh='max-h-[85vh]'/>
+        <Gallery cols='sm:grid-cols-1' caption='I also audited various social media platforms, such as Facebook and WhatsApp.'>
+            <ImageModal src={appAudit} rounded={true} maxh='max-h-[85vh]' outline/>
         </Gallery>
 
         <Break />
@@ -268,23 +274,23 @@ export default function Page() {
         <SectionTitle>Adapting Cimu’s Brand</SectionTitle>
         <p>Cimu’s CEO provided us with a very detailed brand kit, which gave us a strong starting point to build our app designs from. However, as I began creating high-fidelity mockups, I realized that some tweaks had to be made in order to maintain accessibility.</p>
 
-        <ImageWithTextRight img={colors}>
+        <ImageWithTextRight img={colors} outline>
             <SubsectionTitle>Colors</SubsectionTitle>
             <p>Cimu had a very wide range of colors to choose from to create a design system for our app.</p>
             <p>However, many colors had poor contrast or were simply too saturated and strained the eyes. I altered the colors accordingly to fix those issues.</p>
         </ImageWithTextRight>
-        <ImageWithTextLeft img={fonts}>
+        <ImageWithTextLeft img={fonts} outline>
             <SubsectionTitle>Cimu Fonts</SubsectionTitle>
             <p>Cimu had two fonts: Halogen and Avenir. However, Halogen was too wide and unreadable for us to implement in any meaningful way, so we decided not to include it.</p>
         </ImageWithTextLeft>
-        <ImageWithTextRight img={components}>
+        <ImageWithTextRight img={components} outline>
             <SubsectionTitle>Components</SubsectionTitle>
             <p>We decided that all interactive elements should have strokes to them.</p>
             <p>Moreover, buttons are fully rounded to separate them from other components (unless it severely impacts space, such as in the “Date” component).</p>
         </ImageWithTextRight>
 
         <Gallery cols='sm:grid-cols-1'>
-            <ImageModal src={margins} rounded={true} maxh='max-h-[85vh]'/>
+            <ImageModal src={margins} rounded={true} maxh='max-h-[85vh]' outline/>
         </Gallery>
         <SubsectionTitle>Margins</SubsectionTitle>
         <p>Margins were relatively standard, with a 12-px spacing between most components, except for select interactions where it was necessary to include more/less spacing. This would allow elements to be easily clickable, especially for older audiences that may struggle with tapping the screen accurately.</p>
@@ -295,7 +301,7 @@ export default function Page() {
         <SectionTitle>Fast, User-Friendly Onboarding</SectionTitle>
 
         <Gallery cols='sm:grid-cols-1' caption='Flow proposal for Cimu.'>
-            <ImageModal src={flow} rounded={true} maxh='max-h-[85vh]'/>
+            <ImageModal src={flow} rounded={true} maxh='max-h-[85vh]' outline/>
         </Gallery>
 
         <p>I wanted it to be as fast as possible for people set up their accounts. Taking inspiration from other successful apps (such as Uber) I split the process up into two steps:</p>
@@ -317,14 +323,14 @@ export default function Page() {
         <p>During my first week contracted, I created dozens upon dozens of low fidelity mockups to figure out how to map key information onto each page. Here are some low fidelity iterations next to their high fidelity counterparts:</p>
 
         <Gallery cols='sm:grid-cols-1'>
-            <ImageModal src={lofiToHifi} rounded={true} maxh=''/>
+            <ImageModal src={lofiToHifi} rounded={true} maxh='' outline/>
         </Gallery>
         
         <SubsectionTitle separate>Splitting Processes Across Multiple Screens</SubsectionTitle>
-        <Gallery cols='lg:grid-cols-2'>
-            {gallery1.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[85vh]'/>)}
-        </Gallery>
         <p>I also continued to split up information amongst the pages, to continue to try to achieve maximum simplicity in terms of instructions. Throwing all of the information on one long form overwhelmed users, especially older ones that were less technologically adept.</p>
+        <Gallery cols='lg:grid-cols-2'>
+            {gallery1.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[85vh]' outline/>)}
+        </Gallery>
         <SubsectionTitle separate>Why A Progress Bar?</SubsectionTitle>
         <p>During preliminary testing, I found that users often believed that the account creation process was going to be a much longer process than what it actually ended up being. I opted to include the progress bar to help show users that the sign-up process was only three steps long, incentivizing them to make an account.</p>
 
@@ -339,14 +345,14 @@ export default function Page() {
         <section className={`grid grid-cols-1 lg:grid-cols-2 min-h-fit flex-col justify-items-center sm:flex-row overflow-x-scroll gap-y-3 gap-x-3 py-3 my-0 rounded-md items-center scrollbar-hide sm:-mx-8 text-primary-600 text-center bt`}>
             {gallery2.map((data) => 
                 <div className='space-y-2' key={data.caption}>
-                    <ImageModal src={data.img} rounded={true} maxh='max-h-[85vh]'/>
+                    <ImageModal src={data.img} rounded={true} maxh='max-h-[85vh]' />
                     <p>{data.caption}</p>
                 </div>
             )}
         </section>
 
         <Gallery cols='sm:grid-cols-1' caption='Final Iteration: Focusing on making the previous iterations easier to use.'>
-            <ImageModal src={hoursFinal} rounded={true} maxh=''/>
+            <ImageModal src={hoursFinal} rounded={true} maxh='' outline/>
         </Gallery>
 
         <p>Finally, I returned back to those most goals of accessibility and simplicity. I made the buttons larger to make it easier for users to select the correct times, and added a dropdown arrow with a time picker to hint that these “times” were editable. This made the page much easier to use and to understand. Overall, I’d call the final design a success!</p>
@@ -364,7 +370,7 @@ export default function Page() {
         </section>
 
         <Gallery cols='sm:grid-cols-1' caption='Final Iteration'>
-            <ImageModal src={passwordFinal} rounded={true} maxh='max-h-[85vh]'/>
+            <ImageModal src={passwordFinal} rounded={true} maxh='max-h-[85vh]' outline/>
         </Gallery>
 
         <p>While all of my changes to the page were quite subtle, I got feedback on the third iteration that the “Must contain” box looked too much like a multiple choice box. I also realized that the design of the section broke the design system rules that I’d set for the project. </p>
@@ -372,6 +378,8 @@ export default function Page() {
         <p>After testing out various different symbols for the “unsatisfied requirement” state, I settled with the X symbol above. That way, the starting screen wouldn’t look like an error state, but other incomplete states would communicate there were still requirements that were not met.</p>
 
         <Break />
+
+        <MiniTitle>08: FINAL DELIVERABLES</MiniTitle>
 
         <Gallery cols='sm:grid-cols-1'>
             <ImageModal src={finalMockups} rounded={true} maxh=''/>
