@@ -22,6 +22,7 @@ import proposal6 from '@/public/criterion/proposal-6.png'
 import Break from '@/components/break'
 import MiniTitle from '@/components/miniTitle'
 import SectionTitle from '@/components/sectionTitle'
+import ImageWithTextRight from '@/components/imageWithTextRight'
 
 const gallery0 = [colorLogo] as const;
 const gallery1 = [oldCriterion1, oldCriterion2] as const;
@@ -64,8 +65,7 @@ export default function Page() {
 
       <Break />
 
-      <MiniTitle>01: LOGO</MiniTitle>
-      <SectionTitle>Redefining Criterion Cinemas</SectionTitle>
+      <MiniTitle>REDEFINING CRITERION</MiniTitle>
 
       <p>To give a modern spin on cinematic iconography, I overlaid three "movie screens" on top of each other. The slight, uneven rotation of each screen represents how the movie theater is breaking from the mold (and it's own past branding) and trying something new and interesting. The additive color mixing also references how color projections work while also symbolizing that the movie theater is a space for people from all backgrounds to gather and meet one another--an emphasis on community that wasn't accentuated in the past branding. If you're curious, here's the past branding for the theater:</p>
 
@@ -75,21 +75,17 @@ export default function Page() {
 
       <p>I mean sure, it's a abstraction of a bow tie. But it fails to represent the inclusive and independent space that the theater had become to many New Haven residents. And apart from the "classic movie theater" red that the movie logo uses, it gives absolutely no indication at all that the logo <span className='italic'>is even supposed to represent a cinema.</span></p>
 
-      <Break />
-
+      {false && <><Break />
+      <ImageWithTextRight img={criterionText}>
       <MiniTitle>02: TYPEFACE</MiniTitle>
-      <SectionTitle>A Callback to a Modern Classic</SectionTitle>
 
       <p>Helvetica Neue felt like the perfect font to represent this new theater. It's a font that is associated with a lot of rich history while still appearing sleek and modern, reflecting the historical significance of Criterion Cinemas without it appearing like it's stuck in the past.</p>
 
-      <Gallery cols='sm:grid-cols-1'>
-        {gallery2.map((img, i) => <ImageModal key={i} src={img} rounded={true} maxh='max-h-[20rem]'/>)}
-      </Gallery>
+      </ImageWithTextRight>
 
       <Break />
 
       <MiniTitle>03: COLOR PALETTE</MiniTitle>
-      <SectionTitle>Technicolor Extravaganza</SectionTitle>
 
       <p>Inspired by Polaroid and Sony, I opted to have a mainly black-and-white color palette with accents of color as needed. Considering that most promotional material for the theater would typically have screencaps of movies, the vibrant colors from that material could easily do most of the talking.</p>
       
@@ -99,9 +95,9 @@ export default function Page() {
         {gallery3.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
       </Gallery>
 
-      <Break />
-
-      <MiniTitle>04: THE FULL PROPOSAL</MiniTitle>
+      </>}
+      <Break /> 
+      <MiniTitle>THE FULL PROPOSAL</MiniTitle>
 
       <Gallery cols='sm:grid-cols-3'>
         {gallery4.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
