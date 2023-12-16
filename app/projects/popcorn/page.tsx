@@ -83,7 +83,6 @@ export default function Page() {
       <Break />
 
       <MiniTitle>01: IDEATION</MiniTitle>
-      <SectionTitle>Youthful, Expressive, and Fun!</SectionTitle>
       <p>From the very get-go, I knew I wanted this magazine to appeal to younger generations. After all, magazines have had a resurgence in popularity amongst the youth alongside other "retro items" like digital cameras.</p>
 
       <Gallery cols='sm:grid-cols-4' caption='Some of my personal favorite i-D covers.'>
@@ -97,7 +96,6 @@ export default function Page() {
       <Break />
 
       <MiniTitle>02: THE MAGAZINE</MiniTitle>
-      <SectionTitle>A Three-Dimensional Magazine?</SectionTitle>
 
       <Gallery cols='sm:grid-cols-1' caption='Introducing Popcorn* Magazine.'>
         {firstSpread.map((img, i) => <ImageModal key={i} src={img} rounded={true}/>)}
