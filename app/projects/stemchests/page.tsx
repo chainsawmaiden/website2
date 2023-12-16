@@ -66,7 +66,7 @@ export default function Page() {
   return (
     <>
       <ProjectOverview
-        title='Mini Case Study: STEMChests'
+        title='Case Study: STEMChests'
         tagline='Creating accessible science kits for elementary schoolers.'
         timeline='Feb 2022 - Aug 2023'
         team='Aditya Das (just me)'
