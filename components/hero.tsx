@@ -40,7 +40,7 @@ export default function Hero() {
     const [isHovering, setIsHovering] = useState(false as boolean);
     const [hoverContent, setHoverContent] = useState([] as any[]);
     const [myFilters, setMyFilters] = useState(['all'] as string[]);
-    const [boxView, setBoxView] = useState(true as boolean);
+    const [boxView, setBoxView] = useState(false as boolean);
 
     const scrollDirection = useScrollDirection();
 
